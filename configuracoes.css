@@ -77,6 +77,8 @@
     gap: 8px;
     font-size: 0.9rem;
     padding: 8px 15px;
+    color: var(--primary-color);
+    background-color: var(--shadow-light);
 }
 
 /* Estilos para o toggle switch (checkbox customizado) */
@@ -126,7 +128,7 @@
     width: 17px;
     left: 4px;
     bottom: 4px;
-    background-color: white;
+    background-color: var(--card-background);
     -webkit-transition: .4s;
     transition: .4s;
     border-radius: 50%;

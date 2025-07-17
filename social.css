@@ -513,8 +513,8 @@ nav ul li a:hover {
 
 /* Footer */
 footer {
-    background: var(--text-dark); /* Um cinza bem escuro para o footer */
-    color: white;
+    background-color: #212529; /* Um cinza bem escuro para o footer */
+    color: var(--text-light);
     text-align: center;
     padding: 1.8rem 0;
     margin-top: 50px;
@@ -840,4 +840,3 @@ footer {
         width: 100%; /* Ocupa a largura total */
     }
 }
-
