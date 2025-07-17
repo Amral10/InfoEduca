@@ -1,0 +1,155 @@
+/* salvos.css */
+
+/* --- Container e Cabeçalho de Salvos --- */
+.saved-content-container {
+    max-width: 1200px; /* Largura similar ao feed principal */
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.saved-header {
+    background-color: var(--card-background);
+    padding: 25px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px var(--shadow-light);
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.saved-header h2 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    font-weight: 700;
+}
+
+.saved-header p {
+    font-size: 1.1rem;
+    color: var(--text-medium);
+    margin-bottom: 20px;
+}
+
+/* --- Opções de Filtro --- */
+.filter-options {
+    margin-top: 15px;
+}
+
+#saved-filter {
+    padding: 10px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background-color: var(--background-light);
+    color: var(--text-dark);
+    font-size: 0.95rem;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+    cursor: pointer;
+    transition: border-color var(--transition-speed);
+}
+
+#saved-filter:hover {
+    border-color: var(--primary-color);
+}
+
+#saved-filter:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(0, 108, 181, 0.2);
+}
+
+/* --- Feed de Itens Salvos (reaproveita .feed do social.css) --- */
+.saved-feed .post-card {
+    margin-bottom: 20px; /* Espaço entre os posts salvos */
+}
+
+/* --- Estilos para o Botão "Salvar" / "Salvo" --- */
+/* Este estilo será usado tanto no index.html quanto no salvos.html */
+/* O .save-btn deve ter um 'i' para o ícone e um texto */
+
+.post-actions-header .save-btn {
+    background-color: var(--background-light);
+    color: var(--text-medium);
+    padding: 8px 15px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: background-color var(--transition-speed), color var(--transition-speed), transform 0.2s ease;
+    cursor: pointer;
+    border: 1px solid var(--border-color);
+    white-space: nowrap;
+}
+
+.post-actions-header .save-btn:hover {
+    background-color: var(--primary-color);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 108, 181, 0.2);
+}
+
+/* Estilo para quando o item JÁ ESTÁ salvo */
+.post-actions-header .save-btn.active {
+    background-color: var(--primary-color); /* Fundo azul para indicar que está salvo */
+    color: white;
+    border-color: var(--primary-color);
+}
+
+.post-actions-header .save-btn.active:hover {
+    background-color: var(--secondary-color); /* Mudar para vermelho no hover se já salvo (dessalvar) */
+    border-color: var(--secondary-color);
+    color: white;
+    box-shadow: 0 4px 10px rgba(237, 50, 55, 0.2);
+}
+
+.post-actions-header .save-btn.active i { /* Garante que o ícone fique branco */
+    color: white;
+}
+
+
+/* --- Responsividade --- */
+@media (max-width: 768px) {
+    .saved-content-container {
+        padding: 0 15px;
+        margin-top: 20px;
+    }
+
+    .saved-header {
+        padding: 20px 25px;
+    }
+
+    .saved-header h2 {
+        font-size: 1.8rem;
+        gap: 10px;
+    }
+
+    .saved-header p {
+        font-size: 1rem;
+    }
+
+    #saved-filter {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .saved-header h2 {
+        font-size: 1.5rem;
+        flex-direction: column; /* Icone acima do texto em telas muito pequenas */
+        gap: 5px;
+    }
+    .post-actions-header {
+        flex-direction: column; /* Botões empilhados no cabeçalho do post */
+        gap: 10px;
+        align-items: flex-end; /* Alinha à direita */
+    }
+    .post-actions-header .save-btn,
+    .post-actions-header .view-profile-btn {
+        width: fit-content; /* Ajusta largura ao conteúdo */
+        align-self: flex-end; /* Alinha individualmente à direita */
+    }
+}

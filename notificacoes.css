@@ -1,0 +1,162 @@
+/* notificacoes.css */
+
+.notifications-container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.notifications-header {
+    background-color: var(--card-background);
+    padding: 25px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px var(--shadow-light);
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.notifications-header h2 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    font-weight: 700;
+}
+
+.notifications-header p {
+    font-size: 1.1rem;
+    color: var(--text-medium);
+    margin-bottom: 20px;
+}
+
+#mark-all-read-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+}
+
+.notifications-feed ul {
+    list-style: none;
+    padding: 0;
+}
+
+.notification-item {
+    background-color: var(--card-background);
+    padding: 18px 20px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px var(--shadow-light);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    border-left: 5px solid transparent; /* Para indicar status de lida/não lida */
+}
+
+.notification-item.unread {
+    background-color: var(--background-light); /* Fundo um pouco mais claro para não lidas */
+    border-left-color: var(--primary-color); /* Borda azul para não lidas */
+}
+
+.notification-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.notification-avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0; /* Não encolhe o avatar */
+}
+
+.notification-content {
+    flex-grow: 1;
+    font-size: 1rem;
+    color: var(--text-dark);
+}
+
+.notification-content p strong {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.notification-content a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.notification-content a:hover {
+    text-decoration: underline;
+}
+
+.notification-time {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    display: block; /* Garante que a hora fique em uma nova linha ou espaçada */
+    margin-top: 5px;
+}
+
+.mark-read-btn {
+    background: none;
+    border: none;
+    font-size: 1.3rem;
+    color: var(--text-light);
+    cursor: pointer;
+    transition: color 0.2s ease;
+    flex-shrink: 0;
+}
+
+.mark-read-btn:hover {
+    color: var(--primary-color);
+}
+
+.notification-item.unread .mark-read-btn {
+    color: var(--primary-color); /* Ícone azul para notificações não lidas */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .notifications-container {
+        padding: 0 15px;
+    }
+    .notifications-header h2 {
+        font-size: 1.8rem;
+    }
+    .notification-item {
+        flex-direction: column; /* Empilha em telas menores */
+        align-items: flex-start;
+        text-align: left;
+        padding: 15px;
+        gap: 10px;
+    }
+    .notification-avatar {
+        margin-bottom: 5px;
+    }
+    .mark-read-btn {
+        align-self: flex-end; /* Alinha o botão de marcar lida à direita */
+        margin-top: -30px; /* Ajuste para não atrapalhar o conteúdo */
+    }
+}
+
+@media (max-width: 480px) {
+    .notifications-header h2 {
+        font-size: 1.5rem;
+        flex-direction: column;
+        gap: 5px;
+    }
+    #mark-all-read-btn {
+        width: 100%;
+        font-size: 0.95rem;
+    }
+    .notification-content {
+        font-size: 0.95rem;
+    }
+    .notification-time {
+        font-size: 0.8rem;
+    }
+}

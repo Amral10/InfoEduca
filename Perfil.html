@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil - InfoEduca</title>
+    <script src="theme.js"></script>
+    <link rel="stylesheet" href="social.css"> <link rel="stylesheet" href="perfil.css"> <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Info<b style="background:#FF0000; border-radius: 5px; padding:0 5px 0 5px;">Educa</b></h1>
+            </div>
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Feed</a></li>
+                <li><a href="perfil.html" class="active"><i class="fas fa-user"></i> Perfil</a></li>
+                <li><a href="mensagens.html"><i class="fas fa-comments"></i> Mensagens</a></li>
+                <li><a href="grupos.html"><i class="fas fa-users"></i> Grupos</a></li>
+                <li><a href="conteudos.html"><i class="fas fa-book-open"></i> Conteúdos</a></li>
+                <li><a href="login.html" id="logout-btn"><i class="fas fa-sign-out-alt"></i> Sair</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="profile-container">
+        <section class="profile-header-section">
+            <div class="profile-card-main">
+                <div class="profile-avatar-wrapper">
+                    <img src="Imagens ilustrativas/Perfil-image-3.jpeg" alt="Foto de Perfil" class="profile-avatar" id="user-profile-avatar">
+                    <label for="upload-avatar" class="upload-icon"><i class="fas fa-camera"></i></label>
+                    <input type="file" id="upload-avatar" accept="image/*" style="display: none;">
+                </div>
+                <h2 class="profile-name" id="user-profile-name">Pollyana Saoli</h2>
+                <p class="profile-tagline" id="user-profile-tagline">Estudante de [Área de Interesse]</p>
+                <button class="btn-primary" id="edit-profile-btn"><i class="fas fa-edit"></i> Editar Perfil</button>
+            </div>
+
+            <div class="profile-stats-card">
+                <div class="stat-item">
+                    <h3><span id="stat-posts">54</span></h3>
+                    <p>Publicações</p>
+                </div>
+                <div class="stat-item">
+                    <h3><span id="stat-groups">8</span></h3>
+                    <p>Grupos</p>
+                </div>
+                <div class="stat-item">
+                    <h3><span id="stat-connections">120</span></h3>
+                    <p>Interações</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="profile-details-section">
+            <div class="profile-info-card">
+                <h3><i class="fas fa-info-circle"></i> Informações Básicas</h3>
+                <div class="info-group">
+                    <span class="info-label">E-mail:</span>
+                    <span class="info-value" id="user-email">Pollyana.Saoli123@gmail.com</span>
+                </div>
+                <div class="info-group">
+                    <span class="info-label">Data de Nascimento:</span>
+                    <span class="info-value" id="user-dob">11/06/2008</span>
+                </div>
+                <div class="info-group">
+                    <span class="info-label">Cidade:</span>
+                    <span class="info-value" id="user-city">Teixeira de Freitas - BA</span>
+                </div>
+                <div class="info-group">
+                    <span class="info-label">Instituição:</span>
+                    <span class="info-value" id="user-institution">Colégio Modelo</span>
+                </div>
+                <div class="info-group">
+                    <span class="info-label">Interesses:</span>
+                    <span class="info-value" id="user-interests">Matemática, Biologia, Redação, Vestibulares</span>
+                </div>
+            </div>
+
+            <div class="profile-actions-card">
+                <h3><i class="fas fa-cogs"></i> Ações da Conta</h3>
+                <button class="btn-secondary full-width-btn"><i class="fas fa-lock"></i> Mudar Senha</button>
+                <button class="btn-secondary full-width-btn"><i class="fas fa-bell"></i> Gerenciar Notificações</button>
+                <button class="btn-secondary full-width-btn delete-account-btn"><i class="fas fa-trash-alt"></i> Excluir Conta</button>
+            </div>
+        </section>
+
+        <section class="profile-posts-section">
+            <h2><i class="fas fa-thumbtack"></i> Minhas Publicações</h2>
+            <div class="feed" id="my-posts-container">
+                <div class="post-card">
+                    <div class="post-header">
+                        <img src="Imagens ilustrativas/Perfil-image-3.jpeg" alt="Avatar Usuário" class="post-avatar">
+                        <div class="post-info">
+                            <h4>Polly</h4>
+                            <span>@Pollyana.Saoli • 1 dia atrás</span>
+                        </div>
+                    </div>
+                    <div class="post-body">
+                        <p>Dica rápida para física: lembrem-se da importância de entender os vetores! Eles aparecem em muitos conceitos. #Física #ENEMDicas</p>
+                    </div>
+
+                </div>
+
+                <div class="post-card">
+                    <div class="post-header">
+                        <img src="Imagens ilustrativas/Perfil-image-3.jpeg" alt="Avatar Usuário" class="post-avatar">
+                        <div class="post-info">
+                            <h4>Polly<h4>
+                            <span>@Pollyana.Saoli • 3 dias atrás</span>
+                        </div>
+                    </div>
+                    <div class="post-body">
+                        <p>Consegui um resumo top de Biologia sobre Ecologia! Quem quiser, posso compartilhar o PDF. Só pedir! #Biologia #Resumos</p>
+                        <a href="exemplo_ecologia.pdf" download><i class="fas fa-file-pdf"></i> Resumo_Ecologia.pdf</a>
+                    </div>
+                    <div class="post-actions">
+                    </div>
+                </div>
+                </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 InfoEduca. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="social.js"></script> <script src="perfil.js"></script> </body>
+</html>
