@@ -1,0 +1,434 @@
+/* grupos.css */
+
+/* Reutilizando as variáveis de cor do social.css:
+   --primary-color: #006CB5;
+   --secondary-color: #ED3237;
+   --background-light: #F8F9FA;
+   --card-background: #FFFFFF;
+   --text-dark: #212529;
+   --text-medium: #6C757D;
+   --text-light: #ADB5BD;
+   --border-color: #DEE2E6;
+   --shadow-light: rgba(0, 0, 0, 0.08);
+   --transition-speed: 0.3s ease;
+*/
+
+.groups-container {
+    display: flex;
+    max-width: 1200px;
+    height: calc(100vh - 150px); /* Altura adaptável para ocupar a tela */
+    margin: 25px auto;
+    padding: 0 20px;
+    gap: 25px;
+    background: var(--card-background);
+    border-radius: 12px;
+    box-shadow: 0 6px 20px var(--shadow-light);
+    overflow: hidden; /* Garante que o conteúdo interno não vaze */
+}
+
+/* --- Painel da Lista de Grupos --- */
+.group-list-panel {
+    flex: 1;
+    min-width: 300px;
+    max-width: 350px;
+    border-right: 1px solid var(--border-color);
+    padding: 25px 0; /* Padding lateral zero para alinhamento */
+    display: flex;
+    flex-direction: column;
+}
+
+.group-list-panel h2 {
+    font-size: 1.6rem;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+    font-weight: 600;
+    padding: 0 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-groups {
+    position: relative;
+    padding: 0 25px;
+    margin-bottom: 15px;
+}
+
+.search-groups input {
+    width: 100%;
+    padding: 10px 15px;
+    padding-right: 40px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color var(--transition-speed);
+}
+
+.search-groups input:focus {
+    border-color: var(--primary-color);
+}
+
+.search-groups i {
+    position: absolute;
+    right: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-light);
+}
+
+#create-group-btn {
+    margin: 0 25px 20px; /* Margem para alinhar com o padding da lista */
+}
+
+#group-list {
+    list-style: none;
+    overflow-y: auto; /* Rolagem para a lista de grupos */
+    flex-grow: 1;
+    padding-right: 5px;
+}
+
+/* Estilo para a barra de rolagem (reutilizado do social.css, mas garantido aqui) */
+#group-list::-webkit-scrollbar {
+    width: 8px;
+}
+#group-list::-webkit-scrollbar-track {
+    background: var(--background-light);
+    border-radius: 10px;
+}
+#group-list::-webkit-scrollbar-thumb {
+    background: var(--border-color);
+    border-radius: 10px;
+}
+#group-list::-webkit-scrollbar-thumb:hover {
+    background: var(--text-light);
+}
+
+.group-item {
+    display: flex;
+    align-items: center;
+    padding: 15px 25px;
+    border-bottom: 1px solid var(--border-color);
+    cursor: pointer;
+    transition: background-color var(--transition-speed);
+}
+
+.group-item:last-child {
+    border-bottom: none;
+}
+
+.group-item:hover {
+    background-color: var(--background-light);
+}
+
+.group-item.active {
+    background-color: var(--background-light);
+    border-left: 4px solid var(--primary-color);
+    padding-left: 21px;
+}
+
+.group-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+    border: 2px solid var(--primary-color);
+}
+
+.group-info {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.group-name {
+    font-weight: 600;
+    color: var(--text-dark);
+    font-size: 1rem;
+    margin-bottom: 3px;
+}
+
+.group-members {
+    font-size: 0.9rem;
+    color: var(--text-medium);
+}
+
+/* --- Painel de Detalhes do Grupo --- */
+.group-details-panel {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    padding: 0; /* Remove padding inicial */
+    overflow-y: auto; /* Rolagem para os detalhes do grupo */
+}
+
+/* Estilo para a barra de rolagem dos detalhes */
+.group-details-panel::-webkit-scrollbar {
+    width: 8px;
+}
+.group-details-panel::-webkit-scrollbar-track {
+    background: var(--background-light);
+    border-radius: 10px;
+}
+.group-details-panel::-webkit-scrollbar-thumb {
+    background: var(--text-light);
+    border-radius: 10px;
+}
+.group-details-panel::-webkit-scrollbar-thumb:hover {
+    background: var(--text-medium);
+}
+
+.group-details-header {
+    display: flex;
+    align-items: center;
+    padding: 25px;
+    gap: 20px;
+    border-bottom: 1px solid var(--border-color);
+    background-color: var(--card-background);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    flex-wrap: wrap; /* Permite quebrar linha em telas menores */
+}
+
+.group-detail-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--primary-color);
+    box-shadow: 0 0 0 2px var(--card-background);
+    flex-shrink: 0; /* Não permite encolher */
+}
+
+.group-detail-info {
+    flex-grow: 1;
+    min-width: 200px; /* Garante que info não fique muito pequena */
+}
+
+.group-detail-info h2 {
+    font-size: 1.8rem;
+    color: var(--text-dark);
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.group-detail-info p {
+    font-size: 0.95rem;
+    color: var(--text-medium);
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.group-detail-members {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.group-detail-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-left: auto; /* Alinha à direita em telas grandes */
+}
+
+/* Botões de Ação Específicos do Grupo */
+#join-leave-group-btn {
+    padding: 10px 18px; /* Ajusta padding para botões menores */
+    font-size: 0.95rem;
+}
+
+#open-group-chat-btn {
+    padding: 10px 18px;
+    font-size: 0.95rem;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    background-color: var(--card-background);
+}
+
+#open-group-chat-btn:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+
+.group-content-area {
+    padding: 25px;
+    background-color: var(--background-light); /* Fundo claro para o conteúdo do grupo */
+    flex-grow: 1;
+}
+
+.group-content-area h3 {
+    font-size: 1.6rem;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 10px;
+    margin-top: 25px; /* Espaçamento entre seções */
+}
+
+.group-content-area h3:first-of-type {
+    margin-top: 0; /* Remove margem superior do primeiro h3 */
+}
+
+
+/* Reutiliza .feed e .post-card do social.css */
+#group-posts-container {
+    margin-bottom: 30px;
+}
+
+.group-members-list {
+    list-style: none;
+    display: grid; /* Layout em grade para os membros */
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /* Colunas flexíveis */
+    gap: 15px;
+}
+
+.group-members-list li {
+    background: var(--card-background);
+    padding: 12px 15px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.95rem;
+    color: var(--text-dark);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05); /* Sombra suave */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.group-members-list li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.group-members-list li img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--primary-color);
+}
+
+/* --- Responsividade da Página de Grupos --- */
+@media (max-width: 992px) {
+    .groups-container {
+        flex-direction: column;
+        height: auto; /* Deixa a altura ser definida pelo conteúdo */
+        margin-top: 20px;
+    }
+
+    .group-list-panel {
+        max-width: 100%;
+        border-right: none;
+        border-bottom: 1px solid var(--border-color); /* Adiciona borda na parte inferior */
+        padding-bottom: 15px;
+    }
+
+    .group-details-panel {
+        min-height: 500px; /* Altura mínima para a área de detalhes */
+    }
+
+    .group-details-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .group-detail-avatar {
+        margin-bottom: 10px;
+    }
+
+    .group-detail-info {
+        min-width: unset;
+        width: 100%;
+    }
+
+    .group-detail-actions {
+        flex-direction: row;
+        width: 100%;
+        justify-content: center;
+        margin-left: 0;
+    }
+
+    #join-leave-group-btn, #open-group-chat-btn {
+        flex-grow: 1; /* Faz os botões ocuparem o espaço disponível */
+    }
+}
+
+@media (max-width: 600px) {
+    .groups-container {
+        padding: 0 10px;
+    }
+    .group-list-panel h2 {
+        font-size: 1.4rem;
+        padding: 0 15px;
+    }
+    .search-groups, #create-group-btn {
+        margin: 0 15px 15px;
+    }
+    .group-item {
+        padding: 12px 15px;
+    }
+    .group-item.active {
+        padding-left: 11px;
+    }
+    .group-avatar {
+        width: 45px;
+        height: 45px;
+    }
+    .group-name {
+        font-size: 0.95rem;
+    }
+    .group-members {
+        font-size: 0.85rem;
+    }
+
+    .group-details-panel {
+        padding: 0;
+    }
+    .group-details-header {
+        padding: 20px;
+    }
+    .group-detail-avatar {
+        width: 80px;
+        height: 80px;
+    }
+    .group-detail-info h2 {
+        font-size: 1.5rem;
+    }
+    .group-detail-info p {
+        font-size: 0.85rem;
+    }
+    .group-detail-actions {
+        flex-direction: column;
+    }
+    #join-leave-group-btn, #open-group-chat-btn {
+        width: 100%;
+    }
+    .group-content-area {
+        padding: 20px;
+    }
+    .group-content-area h3 {
+        font-size: 1.4rem;
+        margin-bottom: 15px;
+    }
+    .group-members-list {
+        grid-template-columns: 1fr; /* Uma coluna em telas muito pequenas */
+    }
+    .group-members-list li {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+    .group-members-list li img {
+        width: 35px;
+        height: 35px;
+    }
+}

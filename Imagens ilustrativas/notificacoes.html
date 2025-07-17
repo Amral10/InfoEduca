@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notificações - InfoEduca</title>
+    <script src="theme.js"></script>
+    <link rel="stylesheet" href="social.css">
+    <link rel="stylesheet" href="notificacoes.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>InfoEduca</h1>
+            </div>
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Feed</a></li>
+                <li><a href="perfil.html"><i class="fas fa-user"></i> Perfil</a></li>
+                <li><a href="mensagens.html"><i class="fas fa-comments"></i> Mensagens</a></li>
+                <li><a href="grupos.html"><i class="fas fa-users"></i> Grupos</a></li>
+                <li><a href="conteudos.html"><i class="fas fa-book-open"></i> Conteúdos</a></li>
+                <li><a href="login.html" id="logout-btn"><i class="fas fa-sign-out-alt"></i> Sair</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="notifications-container">
+        <section class="notifications-header">
+            <h2><i class="fas fa-bell"></i> Suas Notificações</h2>
+            <p>Mantenha-se atualizado com as últimas atividades em sua rede.</p>
+            <button class="btn-secondary" id="mark-all-read-btn"><i class="fas fa-check-double"></i> Marcar Todas como Lidas</button>
+        </section>
+
+        <section class="notifications-feed">
+            <ul id="notification-list">
+                </ul>
+            <p id="no-notifications-message" style="display: none; text-align: center; color: var(--text-medium); padding: 30px;">
+                Você não possui novas notificações.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 InfoEduca. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="social.js"></script>
+    <script src="notificacoes.js"></script>
+</body>
+</html>
