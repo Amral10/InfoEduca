@@ -137,45 +137,6 @@
     }
 }
 
-
-/* --- Estilos para o Modo Escuro --- */
-body.dark-mode .content-page-container {
-    background-color: var(--background-light); /* Fundo geral da página */
-}
-
-body.dark-mode .section-title {
-    color: var(--primary-color); /* Título em azul principal */
-}
-
-body.dark-mode .section-title::after {
-    background-color: var(--secondary-color); /* Linha vermelha de destaque */
-}
-
-body.dark-mode .content-card {
-    background-color: var(--card-background); /* Fundo do card, se a imagem não ocupar 100% */
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6); /* Sombra mais forte e escura */
-}
-
-body.dark-mode .content-card:hover {
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8); /* Sombra ainda mais forte no hover */
-}
-
-body.dark-mode .card-overlay {
-    /* Gradientes já escuros, não precisam de muita mudança, mas garanta contraste */
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.0));
-}
-
-body.dark-mode .content-card:hover .card-overlay {
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.4));
-}
-
-body.dark-mode .card-overlay h3 {
-    color: white; /* Garante que o texto do card seja branco */
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9); /* Sombra mais intensa no texto */
-}
-
-/* conteudos.css (Adicione estes estilos ao arquivo existente) */
-
 /* ... (Estilos existentes para .content-page-container, .section-title, .content-grid, .content-card, etc.) ... */
 
 .content-detail-section {
@@ -281,47 +242,6 @@ body.dark-mode .card-overlay h3 {
     }
 }
 
-/* --- Modo Escuro para .content-detail-section --- */
-body.dark-mode .content-detail-section {
-    background-color: #1E1E1E; /* Fundo mais escuro no modo escuro */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-    color: var(--text-dark); /* Texto principal claro */
-}
-
-body.dark-mode .content-detail-section h3 {
-    color: var(--primary-color); /* Mantém azul */
-    border-bottom-color: #333333; /* Borda mais escura */
-}
-
-body.dark-mode .content-detail-section p {
-    color: var(--text-dark);
-}
-
-body.dark-mode .content-detail-section ul li a {
-    color: var(--text-medium); /* Links de lista um pouco mais claros */
-}
-
-body.dark-mode .content-detail-section ul li a:hover {
-    color: var(--primary-color);
-}
-
-body.dark-mode .content-detail-section ul li a::before {
-    color: var(--secondary-color); /* Seta vermelha */
-}
-
-body.dark-mode .tag {
-    background-color: var(--primary-color); /* Fundo da tag azul */
-    color: white;
-}
-
-body.dark-mode .tag:hover {
-    background-color: var(--secondary-color); /* Hover da tag vermelho */
-}
-
-
-/* conteudos.css */
-
-/* ... (Estilos já existentes, como .content-card base) ... */
 
 /* Ajustes para os cards terem cores sólidas */
 .content-card {
@@ -396,24 +316,6 @@ body.dark-mode .tag:hover {
     color: white; /* Garante que o texto seja branco sobre a cor sólida */
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Sombra suave para o texto */
 }
-
-/* --- Modo Escuro para os cards com cores sólidas --- */
-/* O background-color dos cards já deve ser suficiente, mas você pode ajustar a sombra ou o overlay */
-body.dark-mode .content-card {
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6); /* Sombra mais forte no modo escuro */
-}
-
-body.dark-mode .content-card:hover {
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8);
-}
-
-body.dark-mode .card-overlay h3 {
-    color: white; /* Garante branco puro */
-}
-
-/* conteudos.css (Adicione estes estilos ao final do arquivo) */
-
-/* ... (Estilos já existentes) ... */
 
 /* --- Estilos para a página "Sobre Nós" --- */
 .about-section {
@@ -547,51 +449,4 @@ body.dark-mode .card-overlay h3 {
         width: 90%;
         max-width: 250px;
     }
-}
-
-
-/* --- Modo Escuro para a página "Sobre Nós" --- */
-body.dark-mode .about-section {
-    background-color: var(--card-background); /* Utiliza a variável para fundo do card no modo escuro */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-    color: var(--text-dark); /* Texto principal claro */
-}
-
-body.dark-mode .about-section p,
-body.dark-mode .about-section ul li {
-    color: var(--text-medium); /* Texto ligeiramente mais claro */
-}
-
-body.dark-mode .about-section h3 {
-    color: var(--primary-color);
-    border-bottom-color: var(--border-color); /* Borda mais escura */
-}
-
-body.dark-mode .about-section ul li i {
-    color: var(--secondary-color); /* Ícones vermelhos */
-}
-
-body.dark-mode .about-section .call-to-action p {
-    color: var(--text-medium);
-}
-
-body.dark-mode .about-section .call-to-action .btn-primary {
-    background-color: var(--primary-color);
-    color: white;
-    border-color: var(--primary-color);
-}
-
-body.dark-mode .about-section .call-to-action .btn-primary:hover {
-    background-color: #005699; /* Cor de hover para botão primário no modo escuro */
-}
-
-body.dark-mode .about-section .call-to-action .btn-secondary {
-    background-color: transparent;
-    color: var(--primary-color);
-    border-color: var(--primary-color);
-}
-
-body.dark-mode .about-section .call-to-action .btn-secondary:hover {
-    background-color: var(--primary-color);
-    color: white;
 }
