@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - InfoEduca</title>
+    <script src="theme.js"></script>
+    <link rel="stylesheet" href="social.css">
+    <link rel="stylesheet" href="login.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <div class="logo">
+                <h1>Info<b style="background:#FF0000; border-radius: 5px; padding:0 5px 0 5px;">Educa</b></h1>
+            </div>
+            <h2>Bem-vindo de volta!</h2>
+            <form id="login-form">
+                <div class="input-group">
+                    <label for="username"><i class="fas fa-user"></i> Usuário ou E-mail</label>
+                    <input type="text" id="username" placeholder="Seu nome de usuário ou e-mail" required>
+                </div>
+                <div class="input-group">
+                    <label for="password"><i class="fas fa-lock"></i> Senha</label>
+                    <input type="password" id="password" placeholder="Sua senha" required>
+                </div>
+                <button type="submit" class="btn-primary" onclick="window.location.href='index.html'">Entrar</button>
+            </form>
+            <div class="links">
+                <a href="sobre.html">Sobre nós</a>
+                <span>•</span>
+                <a href="#" class="signup-link">Criar nova conta</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+</html>
