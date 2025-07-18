@@ -22,7 +22,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
@@ -44,7 +43,7 @@ a:hover {
 
 /* --- Header e Navegação --- */
 header {
-    background: var(--primary-color);
+    background-color: var(--primary-color);
     color: var(--card-background);
     padding: 1rem 0;
     box-shadow: 0 4px 10px var(--shadow-light); /* Sombra mais pronunciada */
@@ -65,21 +64,23 @@ nav {
 
 nav .logo h1 {
     font-size: 2rem; /* Aumenta o tamanho do logo */
-    color: var(--card-background);
+    color: white;
     font-weight: 700; /* Mais negrito */
 }
 
 nav ul {
     list-style: none;
     display: flex;
+
 }
 
 nav ul li {
     margin-left: 30px; /* Mais espaçamento */
+
 }
 
 nav ul li a {
-    color: var(--card-background);
+    color: white;
     font-weight: 500;
     display: flex;
     align-items: center;
@@ -505,6 +506,8 @@ nav ul li a:hover {
     font-size: 0.95rem;
     outline: none;
     transition: border-color var(--transition-speed);
+    color: var(--text-medium);
+    background: var(--background-light);
 }
 
 .comment-input:focus {

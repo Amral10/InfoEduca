@@ -8,11 +8,9 @@ function setTheme(theme) {
         root.style.setProperty('--card-background', '#1e1e1e');
         root.style.setProperty('--text-dark', '#f1f1f1');
         root.style.setProperty('--text-medium', '#b0b0b0');
-         root.style.setProperty('--text-light', '#888');
+        root.style.setProperty('--text-light', '#888');
         root.style.setProperty('--border-color', '#333');
         root.style.setProperty('--shadow-light', 'rgba(255, 255, 255, 0.05)');
-        root.style.setProperty('--footer-collor', '#006CB5');
-        root.style.setProperty('--footer-text', '--footer-color')
         toggle.checked = true;
     } else {
         root.style.setProperty('--background-light', '#F8F9FA');
@@ -22,12 +20,9 @@ function setTheme(theme) {
         root.style.setProperty('--text-light', '#ADB5BD');
         root.style.setProperty('--border-color', '#DEE2E6');
         root.style.setProperty('--shadow-light', 'rgba(0, 0, 0, 0.08)');
-        root.style.setProperty('--footer-collor', '#212529');
-        root.style.setProperty('--footer-text', '#ADB5BD')
         toggle.checked = false;
     }
 
-    // Salva no localStorage
     localStorage.setItem('theme', theme);
 }
 
