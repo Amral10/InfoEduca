@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
         logoutBtn.addEventListener('click', (e) => {
             e.preventDefault();
             alert('Você foi desconectado. (Simulação)');
-            window.location.href = 'index.html';
+            window.location.href = 'login.html';
         });
     }
 });

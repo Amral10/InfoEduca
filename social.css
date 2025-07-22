@@ -62,11 +62,50 @@ nav {
     padding: 0 20px;
 }
 
-nav .logo h1 {
-    font-size: 2rem; /* Aumenta o tamanho do logo */
-    color: white;
-    font-weight: 700; /* Mais negrito */
+nav .logo {
+    position: relative; /* Mantém relative se precisar para outros contextos, mas não mais para a imagem */
+    display: flex; /* Essencial: coloca os filhos (logo-cabecalho e h1) lado a lado */
+    align-items: center; /* Alinha verticalmente no centro */
+    gap: 10px; /* Espaçamento entre a logo e o texto "InfoEduca" */
+    height: 60px; /* Altura do container da logo, ajuste conforme necessário */
+    /* width: auto; */ /* Remova a largura fixa se quiser que se ajuste ao conteúdo */
+    overflow: hidden; /* Mantém overflow hidden */
 }
+
+.logo-cabecalho {
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    width: 60px; 
+    height: 60px;
+    flex-shrink: 0;
+}
+
+.logo-cabecalho img {
+    height: 100%; 
+    width: auto; 
+    object-fit: contain;
+    transition: filter 0.3s ease; 
+}
+
+nav .logo h1 {
+    /* Remove position: relative; z-index: 1; */
+    /* Estes estilos não são mais necessários para o posicionamento lado a lado */
+    font-size: 2rem; /* Mantém o tamanho do texto */
+    color: white; /* Cor do texto "Info" (branco) */
+    font-weight: 700;
+    margin: 0; /* Remove margens padrão */
+    padding: 0; /* Remove preenchimento padrão */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Adiciona uma sombra suave para o texto se destacar */
+    line-height: 1; /* Garante que a altura da linha não afete o alinhamento */
+}
+
+nav .logo h1 b {
+    background: #FF0000;
+    border-radius: 5px;
+    padding: 0 5px 0 5px;
+}
+
 
 nav ul {
     list-style: none;
