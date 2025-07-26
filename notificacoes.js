@@ -100,8 +100,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (notification && !notification.read) {
                     notification.read = true; // Marca como lida (simulado)
                     renderNotifications(); // Re-renderiza a lista
-                    alert(`Notificação de ${notification.user.name} marcada como lida. (Simulação)`);
-                    // --- BACKEND: Enviar requisição para marcar notificação como lida ---
                 }
             });
         });
@@ -115,11 +113,9 @@ document.addEventListener('DOMContentLoaded', () => {
             if (confirmAllRead) {
                 notificationsData.forEach(notif => notif.read = true); // Marca todas como lidas
                 renderNotifications(); // Re-renderiza
-                alert('Todas as notificações foram marcadas como lidas. (Simulação)');
-                // --- BACKEND: Enviar requisição para marcar TODAS as notificações como lidas ---
             }
         } else {
-            alert('Você já leu todas as suas notificações!');
+
         }
     });
 
@@ -128,8 +124,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (logoutBtn) {
         logoutBtn.addEventListener('click', (e) => {
             e.preventDefault();
-            alert('Você foi desconectado. (Simulação)');
-            window.location.href = 'index.html';
+            window.location.href = 'login.html';
         });
     }
 

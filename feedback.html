@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InfoEduca</title>
+    <link rel="stylesheet" href="feedback.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="feedback-standalone-container">
+        <div class="feedback-box">
+            <div class="logo">
+                <div class="logo-cabecalho">
+                    <img src="Imagens ilustrativas/so_a_logo-branco.png" alt="Logo InfoEduca">
+                </div>
+                <h1>Info<b style="background:#FF0000; border-radius: 5px; padding:0 5px 0 5px;">Educa</b></h1>
+            </div>
+            <h2>Sua Opinião Importa!</h2>
+            <p>Sua opinião é muito importante para nós! Use o formulário abaixo para enviar suas sugestões, reclamações ou qualquer feedback que nos ajude a melhorar a InfoEduca.</p>
+            
+            <form id="feedback-form">
+                <div class="input-group">
+                    <label for="feedback-name"><i class="fas fa-user"></i> Seu Nome (Opcional)</label>
+                    <input type="text" id="feedback-name" placeholder="Ex: João Silva">
+                </div>
+                <div class="input-group">
+                    <label for="feedback-email"><i class="fas fa-envelope"></i> Seu E-mail</label>
+                    <input type="email" id="feedback-email" placeholder="seu.email@exemplo.com" required>
+                </div>
+                <div class="input-group">
+                    <label for="feedback-subject"><i class="fas fa-tag"></i> Assunto</label>
+                    <input type="text" id="feedback-subject" placeholder="Ex: Sugestão de funcionalidade" required>
+                </div>
+                <div class="input-group">
+                    <label for="feedback-message"><i class="fas fa-comment-alt"></i> Sua Mensagem</label>
+                    <textarea id="feedback-message" placeholder="Descreva sua sugestão ou reclamação aqui..." rows="8" required></textarea>
+                </div>
+                <button type="submit" class="btn-primary">Enviar Feedback</button>
+            </form>
+            <div class="back-link">
+                <a href="Index.html"><i class="fas fa-arrow-left"></i> Voltar ao Site Principal</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="theme.js"></script>
+    <script src="feedback.js"></script>
+</body>
+</html>

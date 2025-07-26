@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InfoEduca</title>
+    <link rel="stylesheet" href="social.css">
+    <link rel="stylesheet" href="registro.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="register-container">
+        <div class="register-box">
+            <div class="logo">
+                <h1>Info<b style="background:#FF0000; border-radius: 5px; padding:0 5px 0 5px;">Educa</b></h1>
+            </div>
+            <h2>Crie sua conta na InfoEduca!</h2>
+            <form id="register-form">
+                <div class="input-group">
+                    <label for="full-name"><i class="fas fa-user-circle"></i> Nome Completo</label>
+                    <input type="text" id="full-name" placeholder="Seu nome completo" required>
+                </div>
+                <div class="input-group">
+                    <label for="email"><i class="fas fa-envelope"></i> E-mail</label>
+                    <input type="email" id="email" placeholder="seu.email@exemplo.com" required>
+                </div>
+                <div class="input-group">
+                    <label for="password"><i class="fas fa-lock"></i> Senha</label>
+                    <input type="password" id="password" placeholder="Mínimo 6 caracteres" required minlength="6">
+                </div>
+                <div class="input-group">
+                    <label for="confirm-password"><i class="fas fa-lock"></i> Confirmar Senha</label>
+                    <input type="password" id="confirm-password" placeholder="Repita sua senha" required minlength="6">
+                </div>
+                <button type="submit" class="btn-primary">Registrar</button>
+            </form>
+            <div class="links">
+                <span>Já tem uma conta?</span>
+                <a href="login.html" class="login-link">Faça Login</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="theme.js"></script>
+    <script src="registro.js"></script>
+</body>
+</html>

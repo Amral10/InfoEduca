@@ -17,67 +17,92 @@ document.addEventListener('DOMContentLoaded', () => {
     const allGroups = [
         {
             id: 'grupo1',
-            name: 'Grupo de Estudos ENEM Biologia',
-            avatar: 'https://via.placeholder.com/100/006CB5/FFFFFF?text=G1',
-            description: 'Grupo focado em Biologia para o ENEM, com discussões, materiais e exercícios. Junte-se a nós para mandar bem na prova!',
-            membersCount: 15,
-            isMember: true, // Indica se o usuário atual é membro
+            name: 'Projeto de História - Roma Antiga',
+            avatar: 'Imagens ilustrativas/Roma-Antiga.jpeg',
+            description: 'Grupo para colaboração no projeto de História sobre Roma Antiga. Compartilhe suas descobertas e ajude a construir o melhor trabalho!',
+            membersCount: 3,
+            isMember: true,
             members: [
-                { name: 'Maria Eduarda', avatar: 'https://via.placeholder.com/40/006CB5/FFFFFF?text=U1' },
-                { name: 'João Pedro', avatar: 'https://via.placeholder.com/40/ED3237/FFFFFF?text=U2' },
-                { name: 'Ana Carolina', avatar: 'https://via.placeholder.com/40/006CB5/FFFFFF?text=U3' },
-                { name: 'Lucas Pereira', avatar: 'https://via.placeholder.com/40/ED3237/FFFFFF?text=U4' },
-                { name: 'Sofia Mendes', avatar: 'https://via.placeholder.com/40/006CB5/FFFFFF?text=U5' },
-                { name: 'Rafael Costa', avatar: 'https://via.placeholder.com/40/ED3237/FFFFFF?text=U6' },
-                { name: 'Isabela Lima', avatar: 'https://via.placeholder.com/40/006CB5/FFFFFF?text=U7' },
+                { name: 'Amaral', avatar: 'Imagens ilustrativas/perfil-image-1.jpeg' },
+                { name: 'Grazy', avatar: 'Imagens ilustrativas/perfil-image-5.jpeg' },
+                { name: 'Polly', avatar: 'Imagens ilustrativas/perfil-image-3.jpeg'}
             ],
             posts: [
-                { author: 'Maria Eduarda', avatar: 'https://via.placeholder.com/50/006CB5/FFFFFF?text=A1', time: '5 horas atrás', content: 'Alguém tem material sobre Genética Mendeliana? Estou com dificuldade em alguns exercícios. #Biologia #Genética', files: [] },
-                { author: 'João Pedro', avatar: 'https://via.placeholder.com/50/ED3237/FFFFFF?text=A2', time: '1 dia atrás', content: 'Acabei de postar um resumo completo sobre Ecologia no Drive do grupo. Dêem uma olhada! Link: <a href="#" target="_blank">Material_Ecologia_Completo.pdf</a>', files: [{ name: 'Material_Ecologia_Completo.pdf', url: '#', type: 'pdf' }] },
+                {
+                    author: 'Grazy',
+                    avatar: 'Imagens ilustrativas/perfil-image-5.jpeg',
+                    time: '2 dias atrás',
+                    content: 'Encontrei um documentário excelente sobre a Queda do Império Romano. Vou compartilhar o link para o pessoal assistir. #História #RomaAntiga',
+                    files: [
+                        { name: 'musica delacruz', url: 'https://www.youtube.com/watch?v=VQ2NPHdTb-0', type: 'youtube' }
+                    ]
+                },
+                {
+                    author: 'Amaral',
+                    avatar: 'Imagens ilustrativas/perfil-image-1.jpeg',
+                    time: '1 dia atrás', // Você pode ajustar o tempo se quiser que apareça como mais recente
+                    content: 'Consegui com meu professor de História um pdf de exercícios para fixação do conteúdo da ascensão Império Romano.',
+                    files: [
+                        { name: 'Lista Exercício Imperio Romano', url: 'Imagens ilustrativas/questoes-imperio-romano.pdf', type:'pdf'}
+                    ]
+                }
             ]
         },
         {
             id: 'grupo2',
-            name: 'Projeto de História - Roma Antiga',
-            avatar: 'https://via.placeholder.com/100/ED3237/FFFFFF?text=G2',
-            description: 'Grupo para colaboração no projeto de História sobre Roma Antiga. Compartilhe suas descobertas e ajude a construir o melhor trabalho!',
-            membersCount: 5,
-            isMember: false,
+            name: 'Clube de Leitura',
+            avatar: 'Imagens ilustrativas/Literatura.jpeg',
+            description: 'Para quem ama ler! Discutimos clássicos, lançamentos e trocamos indicações de livros. Encontros semanais online.',
+            membersCount: 3,
+            isMember: true,
             members: [
-                { name: 'Laura Santos', avatar: 'https://via.placeholder.com/40/006CB5/FFFFFF?text=U8' },
-                { name: 'Thiago Almeida', avatar: 'https://via.placeholder.com/40/ED3237/FFFFFF?text=U9' },
+                { name: 'Lucas Arruda', avatar: 'Imagens ilustrativas/perfil-image-2.jpeg' },
+                { name: 'Joana', avatar: 'Imagens ilustrativas/perfil-image-4.jpeg' },
+                { name: 'Gabriela Dias', avatar: 'https://via.placeholder.com/40/006CB5/FFFFFF?text=U10' },
             ],
             posts: [
-                { author: 'Laura Santos', avatar: 'https://via.placeholder.com/50/006CB5/FFFFFF?text=U8', time: '2 dias atrás', content: 'Encontrei um documentário excelente sobre a Queda do Império Romano. Vou compartilhar o link para o pessoal assistir. #História #RomaAntiga', files: [] },
+                { author: 'Joana', 
+                    avatar: 'Imagens ilustrativas/perfil-image-4.jpeg', 
+                    time: 'Ontem', 
+                    content: 'Comecei a ler "Dom Casmurro" e estou adorando! Alguém já leu? Quais as impressões?', 
+                    files: [] },
+                
             ]
         },
         {
             id: 'grupo3',
-            name: 'Clube de Leitura de Literatura',
-            avatar: 'https://via.placeholder.com/100/006CB5/FFFFFF?text=G3',
-            description: 'Para quem ama ler! Discutimos clássicos, lançamentos e trocamos indicações de livros. Encontros semanais online.',
-            membersCount: 22,
-            isMember: true,
-            members: [
-                { name: 'Isabela Lima', avatar: 'https://via.placeholder.com/40/006CB5/FFFFFF?text=U7' },
-                { name: 'Rafael Costa', avatar: 'https://via.placeholder.com/40/ED3237/FFFFFF?text=U6' },
-                { name: 'Gabriela Dias', avatar: 'https://via.placeholder.com/40/006CB5/FFFFFF?text=U10' },
-            ],
-            posts: [
-                { author: 'Isabela Lima', avatar: 'https://via.placeholder.com/50/006CB5/FFFFFF?text=U7', time: 'Ontem', content: 'Comecei a ler "Dom Casmurro" e estou adorando! Alguém já leu? Quais as impressões?', files: [] },
-            ]
-        },
-        {
-            id: 'grupo4',
             name: 'Matemática Avançada',
-            avatar: 'https://via.placeholder.com/100/ED3237/FFFFFF?text=G4',
+            avatar: 'Imagens ilustrativas/Matematica.jpeg',
             description: 'Grupo para alunos que buscam aprofundamento em tópicos de Matemática, com foco em cálculo e álgebra linear.',
-            membersCount: 8,
+            membersCount: 4,
             isMember: false,
             members: [
-                { name: 'Fernando Alves', avatar: 'https://via.placeholder.com/40/006CB5/FFFFFF?text=U11' },
+                { name: 'Anthony', avatar: 'https://via.placeholder.com/40/006CB5/FFFFFF?text=U11' },
+                { name: 'Davi Brito', avatar: 'https://via.placeholder.com/40/006CB5/FFFFFF?text=U12'},
+                { name: 'Lucas Moraes', avatar: 'Imagens ilustrativas/perfil-image-2.jpeg'},
+                { name: 'outra pessoa', avatar: 'https://via.placeholder.com/40/006CB5/FFFFFF?text=U12'}
             ],
-            posts: []
+            posts: [
+                {
+                    author: 'Lucas Arruda',
+                    avatar: 'Imagens ilustrativas/perfil-image-2.jpeg', // O avatar do Fernando
+                    time: '2 horas atrás', // Ajuste o tempo conforme desejar
+                    content: `
+                        Salve, galera da Matemática! 👋<br>
+                        <br>
+                        Hoje vamos de um clássico que sempre nos salva em triângulos retângulos: o <b>Teorema de Pitágoras</b>!<br>
+                        <br>
+                        Lembrando: em um triângulo retângulo, a soma dos quadrados dos catetos é igual ao quadrado da hipotenusa(a² = b² + c²).<br>
+                        <br>
+                        <b>Problema para Praticar:</b><br>
+                        Um bombeiro precisa resgatar um gato que está no topo de um prédio. Ele posiciona sua escada a 8 metros da base do prédio. Se o gato está a 15 metros de altura, qual o comprimento mínimo da escada que o bombeiro precisa para alcançá-lo?<br>
+                        <br>
+                        Manda ver nos comentários com suas respostas e percepções! 🚀 #TeoremaDePitagoras #Matematica #Geometria
+                    `,
+                    files: []
+                }
+                
+            ]
         }
     ];
 
@@ -98,8 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
             joinLeaveGroupBtn.classList.remove('btn-primary', 'btn-secondary');
             joinLeaveGroupBtn.classList.add(group.isMember ? 'btn-secondary' : 'btn-primary');
             joinLeaveGroupBtn.innerHTML = group.isMember ? '<i class="fas fa-sign-out-alt"></i> Sair do Grupo' : '<i class="fas fa-sign-in-alt"></i> Participar';
-            
-            // Renderizar posts do grupo
+
             groupPostsContainer.innerHTML = ''; // Limpa posts anteriores
             if (group.posts.length > 0) {
                 group.posts.forEach(post => {
@@ -116,7 +140,24 @@ document.addEventListener('DOMContentLoaded', () => {
                         <div class="post-body">
                             <p>${post.content}</p>
                             ${post.files && post.files.length > 0 ? `
-                                <a href="${post.files[0].url}" download><i class="fas fa-file-${post.files[0].type}"></i> ${post.files[0].name}</a>
+                                <div class="post-files">
+                                    ${post.files.map(file => {
+                                        if (file.type === 'youtube') {
+                                            return `
+                                                <a href="${file.url}" target="_blank" class="file-link youtube-link">
+                                                    <i class="fab fa-youtube"></i> ${file.name}
+                                                </a>
+                                            `;
+                                        } else {
+                                            // Para outros tipos de arquivo (PDF, Word, Imagem, etc.)
+                                            return `
+                                                <a href="${file.url}" download class="file-link">
+                                                    <i class="fas fa-file-${file.type}"></i> ${file.name}
+                                                </a>
+                                            `;
+                                        }
+                                    }).join('')}
+                                </div>
                             ` : ''}
                         </div>
                         <div class="post-actions">
@@ -238,8 +279,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (logoutBtn) {
         logoutBtn.addEventListener('click', (e) => {
             e.preventDefault();
-            alert('Você foi desconectado. (Simulação)');
-            window.location.href = 'index.html'; // Redireciona para a página principal (feed)
+            window.location.href = 'Login.html'; // Redireciona para a página principal (feed)
         });
     }
 });

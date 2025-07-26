@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Configurações - InfoEduca</title>
+    <title>InfoEduca</title>
     <link rel="stylesheet" href="social.css">
     <link rel="stylesheet" href="configuracoes.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
@@ -31,7 +31,7 @@
     <main class="settings-container">
         <section class="settings-header">
             <h2><i class="fas fa-cog"></i> Configurações</h2>
-            <p>Personalize sua experiência na InfoEduca.</p>
+            <p>Personalize sua experiência no InfoEduca.</p>
         </section>
 
         <section class="settings-options">
@@ -41,26 +41,6 @@
                 <a href="perfil.html" class="btn-primary-outline"><i class="fas fa-edit"></i> Editar Perfil</a>
                 <a class="btn-primary-outline" id="change-password-btn"><i class="fas fa-key"></i> Alterar Senha</a>
                 <button class="btn-secondary" id="privacy-settings-btn"><i class="fas fa-lock"></i> Configurações de Privacidade</button>
-            </div>
-
-            <div class="setting-card">
-                <h3><i class="fas fa-bell"></i> Preferências de Notificações</h3>
-                <p>Escolha quais tipos de notificações você deseja receber.</p>
-                <div class="toggle-group">
-                    <label class="toggle-switch">
-                        <input type="checkbox" id="email-notifs" checked>
-                        <span class="slider round"></span>
-                    </label>
-                    <label for="email-notifs">Notificações por E-mail</label>
-                </div>
-                <div class="toggle-group">
-                    <label class="toggle-switch">
-                        <input type="checkbox" id="push-notifs">
-                        <span class="slider round"></span>
-                    </label>
-                    <label for="push-notifs">Notificações Push (Navegador)</label>
-                </div>
-                <a class="btn-primary-outline" id="manage-notif-types-btn"><i class="fas fa-list-check"></i> Gerenciar Tipos de Notificação</a>
             </div>
 
             <div class="setting-card">
@@ -84,8 +64,19 @@
     </main>
 
     <footer>
+    <div class="footer-content">
         <p>&copy; 2025 InfoEduca. Todos os direitos reservados.</p>
-    </footer>
+        <ul class="footer-links">
+            <li><a href="sobre.html">Sobre Nós</a></li>
+            <li><span>|</span></li>
+            <li><a href="feedback.html">Feedback</a></li> <!-- NOVO LINK AQUI -->
+            <li><span>|</span></li>
+            <li><a href="#">Termos de Uso</a></li> <!-- Exemplo de outro link -->
+            <li><span>|</span></li>
+            <li><a href="#">Política de Privacidade</a></li> <!-- Exemplo de outro link -->
+        </ul>
+    </div>
+</footer>
 
     <script src="theme.js"></script>
     <script src="social.js"></script>

@@ -17,7 +17,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (username === TEST_USERNAME && password === TEST_PASSWORD) {
             // Simulação de login bem-sucedido
-            alert('Login bem-sucedido! Redirecionando para o feed...');
             // Em um sistema real, você definiria um token de sessão ou cookie aqui
             window.location.href = 'index.html'; // Redireciona para a página principal
         } else {
@@ -33,19 +32,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const forgotPasswordLink = document.querySelector('.forgot-password');
     const signupLink = document.querySelector('.signup-link');
 
-    if (forgotPasswordLink) {
-        forgotPasswordLink.addEventListener('click', (e) => {
-            e.preventDefault();
-            alert('Funcionalidade de recuperação de senha em desenvolvimento.');
-            // window.location.href = 'forgot-password.html'; // Redirecionar para página de recuperação
-        });
-    }
-
     if (signupLink) {
         signupLink.addEventListener('click', (e) => {
             e.preventDefault();
-            alert('Funcionalidade de criação de conta em desenvolvimento.');
-            // window.location.href = 'signup.html'; // Redirecionar para página de cadastro
+           window.location.href = 'registro.html'
         });
     }
 });

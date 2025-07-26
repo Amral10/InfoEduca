@@ -1,0 +1,256 @@
+/* feedback.css - Estilos para a página de feedback autônoma */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Variáveis CSS para manter a consistência de cores */
+:root {
+    --primary-color: #006CB5; /* Azul principal */
+    --secondary-color: #ED3237; /* Vermelho */
+    --background-light: #F8F9FA; /* Fundo muito claro, quase branco */
+    --card-background: #FFFFFF; /* Fundo de cartões e módulos (branco puro) */
+    --text-dark: #212529; /* Texto escuro para bom contraste */
+    --text-medium: #6C757D; /* Texto cinza para descrições */
+    --text-light: #ADB5BD; /* Texto muito claro para detalhes */
+    --border-color: #DEE2E6; /* Borda suave */
+    --shadow-light: rgba(0, 0, 0, 0.08); /* Sombra suave */
+    --transition-speed: 0.3s ease;
+}
+
+/* Base HTML para acessibilidade de fonte */
+html {
+    font-size: 100%; /* Base para rem, ajustado pelo theme.js */
+}
+
+/* Reset básico e configurações globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--text-medium);
+    background: var(--background-light);
+    -webkit-font-smoothing: antialiased;
+    display: flex; /* Para centralizar o container principal */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ocupa a altura total da viewport */
+    padding: 20px; /* Espaçamento em telas menores */
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: color var(--transition-speed);
+}
+
+a:hover {
+    color: var(--secondary-color);
+}
+
+/* --- Container Principal da Página de Feedback --- */
+.feedback-standalone-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 600px; /* Largura máxima para o container do formulário */
+}
+
+.feedback-box {
+    background-color: var(--card-background);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px var(--shadow-light);
+    text-align: center;
+    width: 100%;
+    border-top: 6px solid var(--primary-color);
+}
+
+.feedback-box .logo {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    height: 60px;
+    position: relative;
+}
+
+.feedback-box .logo-cabecalho {
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.feedback-box .logo-cabecalho img {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+    filter: opacity(0.8);
+    transition: filter 0.3s ease;
+}
+
+.feedback-box .logo h1 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.feedback-box .logo h1 b {
+    background: #FF0000;
+    border-radius: 5px;
+    padding:0 5px 0 5px;
+}
+
+.feedback-box h2 {
+    font-size: 2rem; /* Título principal da página */
+    color: var(--text-dark);
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.feedback-box p {
+    font-size: 1rem;
+    margin-bottom: 30px;
+    line-height: 1.7;
+    color: var(--text-medium); /* Cor do texto de introdução */
+}
+
+/* --- Estilos do Formulário --- */
+.feedback-box form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-group {
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    font-size: 1rem;
+    color: var(--text-medium);
+    margin-bottom: 8px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.input-group label i {
+    color: var(--primary-color);
+    font-size: 1.1rem;
+}
+
+.input-group input[type="text"],
+.input-group input[type="email"],
+.input-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 1rem;
+    color: var(--text-dark);
+    background-color: var(--background-light);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+.input-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(0, 108, 181, 0.2);
+}
+
+.btn-primary {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-top: 20px;
+    border-radius: 8px;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color var(--transition-speed), transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 108, 181, 0.25);
+}
+
+.btn-primary:hover {
+    background: #004D8C;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 108, 181, 0.35);
+}
+
+/* --- Link de Voltar --- */
+.back-link {
+    margin-top: 30px;
+    font-size: 1rem;
+}
+
+.back-link a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--primary-color);
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.back-link a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+/* --- Responsividade --- */
+@media (max-width: 600px) {
+    .feedback-box {
+        padding: 30px 20px;
+        border-radius: 10px;
+    }
+    .feedback-box .logo h1 {
+        font-size: 1.8rem;
+    }
+    .feedback-box h2 {
+        font-size: 1.6rem;
+        margin-bottom: 15px;
+    }
+    .feedback-box p {
+        font-size: 0.95rem;
+        margin-bottom: 20px;
+    }
+    .input-group input,
+    .input-group textarea {
+        padding: 10px 12px;
+        font-size: 0.9rem;
+    }
+    .input-group textarea {
+        min-height: 100px;
+    }
+    .btn-primary {
+        padding: 12px;
+        font-size: 1rem;
+    }
+    .back-link {
+        font-size: 0.9rem;
+    }
+}

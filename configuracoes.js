@@ -39,63 +39,6 @@ document.addEventListener('DOMContentLoaded', () => {
         // --- BACKEND: Redirecionaria para uma página mais detalhada de privacidade ---
     });
 
-    emailNotifsToggle.addEventListener('change', (e) => {
-        userPreferences.emailNotifications = e.target.checked;
-        alert(`Notificações por E-mail: ${userPreferences.emailNotifications ? 'Ativadas' : 'Desativadas'}. (Simulação)`);
-        // --- BACKEND: Enviar requisição para atualizar preferência de e-mail ---
-    });
-
-    pushNotifsToggle.addEventListener('change', (e) => {
-        userPreferences.pushNotifications = e.target.checked;
-        alert(`Notificações Push: ${userPreferences.pushNotifications ? 'Ativadas' : 'Desativadas'}. (Simulação)`);
-        // --- BACKEND: Enviar requisição para atualizar preferência de push ---
-        // Aqui também se faria a lógica de pedir permissão para notificações push do navegador
-    });
-
-    manageNotifTypesBtn.addEventListener('click', () => {
-        alert('Funcionalidade "Gerenciar Tipos de Notificação" em desenvolvimento. (Simulação)');
-        // --- BACKEND: Redirecionaria para uma página com checkboxes para cada tipo de notificação ---
-    });
-
-    // configuracoes.js
-
-document.addEventListener('DOMContentLoaded', () => {
-    // ... (código existente) ...
-
-    const darkModeToggle = document.getElementById('dark-mode-toggle');
-
-    // --- LÓGICA DO MODO ESCURO ---
-    // 1. Carrega a preferência salva ao iniciar a página de configurações
-    //    Verifica se a preferência de modo escuro está no localStorage
-    //    Se estiver, usa esse valor; caso contrário, assume 'false' (modo claro)
-    const savedDarkModePreference = localStorage.getItem('infoeducaDarkMode') === 'true';
-    darkModeToggle.checked = savedDarkModePreference; // Define o estado do toggle
-
-    // Aplica o modo escuro no carregamento da página de configurações, se salvo
-    if (savedDarkModePreference) {
-        document.body.classList.add('dark-mode');
-    }
-
-    // Event listener para o toggle do modo escuro
-    darkModeToggle.addEventListener('change', (e) => {
-        const isDarkModeEnabled = e.target.checked;
-
-        if (isDarkModeEnabled) {
-            document.body.classList.add('dark-mode');
-            // Salva a preferência no localStorage
-            localStorage.setItem('infoeducaDarkMode', 'true');
-            alert('Modo Escuro ativado em todas as páginas! (Simulação)');
-        } else {
-            document.body.classList.remove('dark-mode');
-            // Salva a preferência no localStorage
-            localStorage.setItem('infoeducaDarkMode', 'false');
-            alert('Modo Escuro desativado em todas as páginas! (Simulação)');
-        }
-        // Em um cenário real com backend, você também enviaria essa preferência para o servidor.
-    });
-
-    // ... (restante do código existente) ...
-});
 
     deleteAccountBtn.addEventListener('click', () => {
         const confirmDelete = confirm('AVISO: Excluir sua conta é uma ação irreversível. Tem certeza que deseja continuar?');

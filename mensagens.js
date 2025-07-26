@@ -20,22 +20,41 @@ document.addEventListener('DOMContentLoaded', () => {
             name: 'Amaral',
             avatar: 'Imagens ilustrativas/perfil-image-1.jpeg',
             messages: [
-                { sender: 'Amaral', avatar: 'Imagens ilustrativas/perfil-image-1.jpeg', content: 'Olá! Conseguiu resolver a questão de física que te enviei?', time: '14:28' },
+                { sender: '<b>Amaral</b>', avatar: 'Imagens ilustrativas/perfil-image-1.jpeg', content: 'Olá! Conseguiu resolver a questão de física que te enviei?', time: '14:28' },
                 { sender: 'Eu', avatar: 'Imagens ilustrativas/perfil-image-3.jpeg', content: 'Oii! Ainda não olhei com calma, mas vou tentar agora à tarde. Era aquela de eletrodinâmica?', time: '14:30' },
-                { sender: 'Amaral', avatar: 'Imagens ilustrativas/perfil-image-1.jpeg', content: 'Isso mesmo! Qualquer coisa, me avisa que posso tentar te ajudar.', time: '14:31' },
+                { sender: '<b>Amaral</b>', avatar: 'Imagens ilustrativas/perfil-image-1.jpeg', content: 'Isso mesmo! Qualquer coisa, me avisa que posso tentar te ajudar.', time: '14:31' },
                 { sender: 'Eu', avatar: 'Imagens ilustrativas/perfil-image-3.jpeg', content: 'Combinado! Assim que tiver novidades, te falo.', time: '14:32' },
-                { sender: 'Amaral', avatar: 'Imagens ilustrativas/perfil-image-1.jpeg', content: 'Perfeito!', time: '14:35' },
+                { sender: '<b>Amaral</b>', avatar: 'Imagens ilustrativas/perfil-image-1.jpeg', content: 'Perfeito!', time: '14:35' },
             ]
         },
         {
             id: 'chat2',
-            name: 'Lucas Moraes',
+            name: 'Grazy',
+            avatar: 'Imagens ilustrativas/perfil-image-5.jpeg',
+            messages: [
+                { sender: '<b>Grazy</b>', avatar: 'Imagens ilustrativas/perfil-image-5.jpeg', content: 'E aí, tudo certo para a prova de matemática de amanhã?', time: '20:00' },
+                { sender: 'Eu', avatar: 'Imagens ilustrativas/perfil-image-3.jpeg', content: 'Sim, estou revisando os últimos tópicos. Você conseguiu entender a parte de funções quadráticas?', time: '20:15' },
+                { sender: '<b>Grazy</b>', avatar: 'Imagens ilustrativas/perfil-image-5.jpeg', content: 'Mais ou menos. Tive um pouco de dificuldade com os gráficos. Podemos revisar juntos amanhã antes da aula?', time: '20:20' },
+                { sender: 'Eu', avatar: 'Imagens ilustrativas/perfil-image-3.jpeg', content: 'Com certeza! Chego uns 20min mais cedo.', time: '20:25' },
+                { sender: '<b>Grazy</b>', avatar: 'Imagens ilustrativas/perfil-image-5.jpeg', content: 'A gente podia revisar tbm sobre PA', time: '20:26'},
+                { sender: 'Eu', avatar:'Imagens ilustrativas/perfil-image-3.jpeg', content: 'Não entendi nada na aula de Progressão Aritimética ', time: '20:28'},
+                { sender: '<b>Grazy</b>', avatar: 'Imagens ilustrativas/perfil-image-5.jpeg', content: 'Também não kkkk', time: '20:30'},
+
+            ]
+        },
+        {
+            id: 'chat3',
+            name: 'Lucas Arruda',
             avatar: 'Imagens ilustrativas/perfil-image-2.jpeg',
             messages: [
-                { sender: 'Lucas Moraes', avatar: 'Imagens ilustrativas/perfil-image-2.jpeg', content: 'E aí, tudo certo para a prova de matemática de amanhã?', time: 'Ontem 20:00' },
-                { sender: 'Eu', avatar: 'Imagens ilustrativas/perfil-image-3.jpeg', content: 'Sim, estou revisando os últimos tópicos. Você conseguiu entender a parte de funções quadráticas?', time: 'Ontem 20:15' },
-                { sender: 'Lucas Moraes', avatar: 'Imagens ilustrativas/perfil-image-2.jpeg', content: 'Mais ou menos. Tive um pouco de dificuldade com os gráficos. Podemos revisar juntos amanhã antes da aula?', time: 'Ontem 20:20' },
-                { sender: 'Eu', avatar: 'Imagens ilustrativas/perfil-image-3.jpeg', content: 'Com certeza! Chego uns 20min mais cedo.', time: 'Ontem 20:25' },
+                { sender: '<b>Lucas Arruda</b>', avatar: 'Imagens ilustrativas/perfil-image-2.jpeg', content: 'E aí, tudo certo para a prova de matemática de amanhã?', time: '20:00' },
+                { sender: 'Eu', avatar: 'Imagens ilustrativas/perfil-image-3.jpeg', content: 'Sim, estou revisando os últimos tópicos. Você conseguiu entender a parte de funções quadráticas?', time: '20:15' },
+                { sender: '<b>Lucas Arruda</b>', avatar: 'Imagens ilustrativas/perfil-image-2.jpeg', content: 'Mais ou menos. Tive um pouco de dificuldade com os gráficos. Podemos revisar juntos amanhã antes da aula?', time: '20:20' },
+                { sender: 'Eu', avatar: 'Imagens ilustrativas/perfil-image-3.jpeg', content: 'Com certeza! Chego uns 20min mais cedo.', time: '20:25' },
+                { sender: '<b>Lucas Arruda</b>', avatar: 'Imagens ilustrativas/perfil-image-2.jpeg', content: 'A gente podia revisar tbm sobre PA', time: '20:26'},
+                { sender: 'Eu', avatar:'Imagens ilustrativas/perfil-image-3.jpeg', content: 'Não entendi nada na aula de Progressão Aritimética ', time: '20:28'},
+                { sender: '<b>Lucas Arruda</b>', avatar: 'Imagens ilustrativas/perfil-image-2.jpeg', content: 'Também não kkkk', time: '20:30'},
+
             ]
         },
         

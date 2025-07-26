@@ -1,0 +1,182 @@
+/* registro.css */
+
+/* Estilos globais ou do social.css já devem definir :root, body, etc. */
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Garante que a página ocupe toda a altura da viewport */
+    background-color: var(--background-light); /* Cor de fundo clara padrão */
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 20px; /* Espaçamento em telas menores */
+    box-sizing: border-box;
+}
+
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 500px; /* Largura máxima um pouco maior para o formulário de registro */
+}
+
+.register-box {
+    background-color: var(--card-background); /* Fundo branco ou claro para a caixa de registro */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px var(--shadow-light); /* Sombra suave */
+    text-align: center;
+    width: 100%;
+    border-top: 6px solid var(--primary-color); /* Borda superior para destaque */
+}
+
+.register-box .logo {
+    margin-bottom: 20px; /* Reduz um pouco a margem para mais espaço no formulário */
+    display: flex; /* Para alinhar logo e texto */
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Espaço entre logo e texto */
+    height: 60px; /* Altura do container da logo */
+    position: relative;
+}
+
+.register-box .logo-cabecalho {
+    width: 60px; /* Largura do container da imagem */
+    height: 60px; /* Altura do container da imagem */
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.register-box .logo-cabecalho img {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+    filter: opacity(0.8);
+    transition: filter 0.3s ease;
+}
+
+.register-box .logo h1 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+    line-height: 1; /* Para alinhar melhor com a imagem */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.register-box .logo h1 b {
+    background: #FF0000;
+    border-radius: 5px;
+    padding:0 5px 0 5px;
+}
+
+.register-box h2 {
+    font-size: 1.8rem;
+    color: var(--text-dark);
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    font-size: 1rem;
+    color: var(--text-medium);
+    margin-bottom: 8px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espaço entre ícone e texto */
+}
+
+.input-group label i {
+    color: var(--primary-color);
+    font-size: 1.1rem;
+}
+
+.input-group input[type="text"],
+.input-group input[type="email"],
+.input-group input[type="password"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 1rem;
+    color: var(--text-dark);
+    background-color: var(--background-light);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.input-group input[type="text"]:focus,
+.input-group input[type="email"]:focus,
+.input-group input[type="password"]:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(0, 108, 181, 0.2);
+}
+
+.register-box .btn-primary {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-top: 10px;
+    border-radius: 8px;
+}
+
+.links {
+    margin-top: 25px;
+    font-size: 0.95rem;
+    color: var(--text-medium);
+}
+
+.links a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.links a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+/* --- Responsividade para telas menores --- */
+@media (max-width: 550px) {
+    .register-box {
+        padding: 30px 20px;
+        border-radius: 10px;
+    }
+
+    .register-box .logo h1 {
+        font-size: 1.8rem;
+    }
+
+    .register-box h2 {
+        font-size: 1.5rem;
+        margin-bottom: 25px;
+    }
+
+    .input-group input {
+        padding: 10px 12px;
+    }
+
+    .register-box .btn-primary {
+        padding: 12px;
+        font-size: 1rem;
+    }
+
+    .links {
+        font-size: 0.85rem;
+    }
+}

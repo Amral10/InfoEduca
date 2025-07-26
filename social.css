@@ -553,15 +553,7 @@ nav ul li a:hover {
     border-color: var(--primary-color);
 }
 
-/* Footer */
-footer {
-    background-color: #212529; /* Um cinza bem escuro para o footer */
-    color: var(--text-light);
-    text-align: center;
-    padding: 1.8rem 0;
-    margin-top: 50px;
-    font-size: 0.9rem;
-}
+
 
 /* --- Responsividade --- */
 @media (max-width: 992px) {
@@ -882,3 +874,99 @@ footer {
         width: 100%; /* Ocupa a largura total */
     }
 }
+
+/* --- Estilos para o Rodapé --- */
+footer {
+    background-color: #212529;
+    color: var(--text-light);
+    padding: 1.8rem 0;
+    text-align: center;
+    border-top: 1px solid var(--border-color); /* Borda superior para separação */
+    margin-top: 50px; /* Margem superior para separar do conteúdo */
+    font-size: 0.9rem; /* Fonte um pouco menor */
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column; /* Empilha em telas pequenas */
+    align-items: center;
+    gap: 10px; /* Espaçamento entre o parágrafo e os links */
+}
+
+.footer-content p {
+    margin: 0;
+    color: var(--text-medium);
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Para alinhar os links lado a lado */
+    flex-wrap: wrap; /* Permite que os links quebrem a linha em telas pequenas */
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Espaçamento entre os itens da lista */
+}
+
+.footer-links li {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espaçamento entre o link e o separador */
+}
+
+.footer-links li:last-child span {
+    display: none; /* Remove o separador do último item */
+}
+
+.footer-links a {
+    color: var(--text-medium); /* Cor dos links do rodapé */
+    text-decoration: none;
+    transition: color var(--transition-speed);
+}
+
+.footer-links a:hover {
+    color: var(--primary-color); /* Cor de hover dos links do rodapé */
+}
+
+.footer-links span {
+    color: var(--text-light); /* Cor do separador */
+}
+
+/* --- Responsividade do Rodapé --- */
+@media (max-width: 768px) {
+    footer {
+        padding: 15px 0;
+    }
+    .footer-content {
+        padding: 0 15px;
+    }
+    .footer-links {
+        font-size: 0.85rem;
+        gap: 8px;
+    }
+    .footer-links li {
+        gap: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-content {
+        flex-direction: column; /* Força empilhamento em telas muito pequenas */
+        gap: 10px;
+    }
+    .footer-links {
+        flex-direction: column; /* Empilha os links em telas muito pequenas */
+        gap: 5px;
+    }
+    .footer-links li {
+        gap: 0; /* Remove gap entre link e separador */
+    }
+    .footer-links li span {
+        display: none; /* Remove todos os separadores em telas muito pequenas */
+    }
+}
+
