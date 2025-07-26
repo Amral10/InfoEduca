@@ -30,3 +30,4 @@ Este projeto foi construído com as seguintes tecnologias web clássicas:
 * **CSS3:** Estilização moderna e responsiva (com variáveis CSS para fácil customização!).
 * **JavaScript (Vanilla JS):** Interatividade, manipulação do DOM e lógica de frontend.
 * **Font Awesome:** Biblioteca de ícones para uma interface intuitiva.
+
