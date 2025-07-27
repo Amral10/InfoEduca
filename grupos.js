@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
             members: [
                 { name: 'Amaral', avatar: 'Imagens ilustrativas/perfil-image-1.jpeg' },
                 { name: 'Grazy', avatar: 'Imagens ilustrativas/perfil-image-5.jpeg' },
-                { name: 'Polly', avatar: 'Imagens ilustrativas/perfil-image-3.jpeg'}
+                { name: 'Polly', avatar: 'Imagens ilustrativas/perfil-image-3.jpeg'},
             ],
             posts: [
                 {
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     time: '2 dias atrás',
                     content: 'Encontrei um documentário excelente sobre a Queda do Império Romano. Vou compartilhar o link para o pessoal assistir. #História #RomaAntiga',
                     files: [
-                        { name: 'musica delacruz', url: 'https://www.youtube.com/watch?v=VQ2NPHdTb-0', type: 'youtube' }
+                        { name: 'Queda Imperio Romano - Nostalgia', url: 'https://youtu.be/ENjqQKOegQY?si=urCx6F36bA-gnRVn', type: 'youtube' }
                     ]
                 },
                 {
@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
             members: [
                 { name: 'Lucas Arruda', avatar: 'Imagens ilustrativas/perfil-image-2.jpeg' },
                 { name: 'Joana', avatar: 'Imagens ilustrativas/perfil-image-4.jpeg' },
-                { name: 'Gabriela Dias', avatar: 'https://via.placeholder.com/40/006CB5/FFFFFF?text=U10' },
+                { name: 'Polly', avatar: 'Imagens Ilustrativas/perfil-image-3.jpeg' },
             ],
             posts: [
                 { author: 'Joana', 
@@ -74,13 +74,11 @@ document.addEventListener('DOMContentLoaded', () => {
             name: 'Matemática Avançada',
             avatar: 'Imagens ilustrativas/Matematica.jpeg',
             description: 'Grupo para alunos que buscam aprofundamento em tópicos de Matemática, com foco em cálculo e álgebra linear.',
-            membersCount: 4,
+            membersCount: 2,
             isMember: false,
             members: [
-                { name: 'Anthony', avatar: 'https://via.placeholder.com/40/006CB5/FFFFFF?text=U11' },
-                { name: 'Davi Brito', avatar: 'https://via.placeholder.com/40/006CB5/FFFFFF?text=U12'},
+                { name: 'Davi Brito', avatar: 'Imagens ilustrativas/perfil-image-6.jpeg'},
                 { name: 'Lucas Moraes', avatar: 'Imagens ilustrativas/perfil-image-2.jpeg'},
-                { name: 'outra pessoa', avatar: 'https://via.placeholder.com/40/006CB5/FFFFFF?text=U12'}
             ],
             posts: [
                 {
@@ -122,7 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
             joinLeaveGroupBtn.textContent = group.isMember ? 'Sair do Grupo' : 'Participar';
             joinLeaveGroupBtn.classList.remove('btn-primary', 'btn-secondary');
             joinLeaveGroupBtn.classList.add(group.isMember ? 'btn-secondary' : 'btn-primary');
-            joinLeaveGroupBtn.innerHTML = group.isMember ? '<i class="fas fa-sign-out-alt"></i> Sair do Grupo' : '<i class="fas fa-sign-in-alt"></i> Participar';
+            joinLeaveGroupBtn.innerHTML = group.isMember ? '<i class="fas fa-sign-out-alt"></i> Sair do Grupo' : '<i class="fas fa-sign-in-alt"></i> Participar do Grupo';
 
             groupPostsContainer.innerHTML = ''; // Limpa posts anteriores
             if (group.posts.length > 0) {

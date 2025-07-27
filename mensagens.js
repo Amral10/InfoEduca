@@ -54,6 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 { sender: '<b>Lucas Arruda</b>', avatar: 'Imagens ilustrativas/perfil-image-2.jpeg', content: 'A gente podia revisar tbm sobre PA', time: '20:26'},
                 { sender: 'Eu', avatar:'Imagens ilustrativas/perfil-image-3.jpeg', content: 'Não entendi nada na aula de Progressão Aritimética ', time: '20:28'},
                 { sender: '<b>Lucas Arruda</b>', avatar: 'Imagens ilustrativas/perfil-image-2.jpeg', content: 'Também não kkkk', time: '20:30'},
+                { sender: 'Eu', avatar: 'Imagens ilustrativas/perfil-image-3.jpeg', content: 'Eu te espero.', time: '20:31'}
 
             ]
         },

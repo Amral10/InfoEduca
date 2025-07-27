@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             id: 'notif001',
             type: 'like',
-            user: { name: 'Maria Eduarda', username: 'maria_edu', avatar: 'https://via.placeholder.com/50/006CB5/FFFFFF?text=ME' },
+            user: { name: 'Lucas Arruda', username: 'Luskinhas', avatar: 'Imagens ilustrativas/perfil-image-2.jpeg' },
             content: 'curtiu sua <a href="#">publicação</a>',
             time: '10 minutos atrás',
             read: false
@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             id: 'notif002',
             type: 'comment',
-            user: { name: 'João Dutra', username: 'joao_d', avatar: 'https://via.placeholder.com/50/ED3237/FFFFFF?text=JD' },
+            user: { name: 'Davi Brito', username: 'Davi_Brito', avatar: 'Imagens ilustrativas/perfil-image-6.jpeg' },
             content: 'comentou na sua <a href="#">publicação</a>',
             time: '30 minutos atrás',
             read: false
@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             id: 'notif003',
             type: 'group_invite',
-            user: { name: 'Professor Almeida', username: 'prof_almeida', avatar: 'https://via.placeholder.com/50/006CB5/FFFFFF?text=PA' },
+            user: { name: 'Amaral', username: 'Amral10', avatar: 'Imagens ilustrativas/perfil-image-1.jpeg' },
             content: 'te convidou para o grupo <a href="grupos.html">"Matemática Avançada"</a>',
             time: '1 hora atrás',
             read: false
@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             id: 'notif004',
             type: 'message',
-            user: { name: 'Ana Carolina', username: 'ana_carol', avatar: 'https://via.placeholder.com/50/ED3237/FFFFFF?text=AC' },
+            user: { name: 'grazy', username: 'Grazy', avatar: 'Imagens ilustrativas/perfil-image-5.jpeg' },
             content: 'enviou uma <a href="mensagens.html">nova mensagem</a> para você',
             time: '2 horas atrás',
             read: true // Exemplo de notificação já lida
@@ -43,10 +43,10 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             id: 'notif005',
             type: 'mention',
-            user: { name: 'Lucas Pereira', username: 'lucas_p', avatar: 'https://via.placeholder.com/50/006CB5/FFFFFF?text=LP' },
+            user: { name: 'Amaral', username: 'Amral10', avatar: 'Imagens ilustrativas/perfil-image-1.jpeg' },
             content: 'mencionou você em uma <a href="#">publicação</a>',
             time: '1 dia atrás',
-            read: false
+            read: true
         },
     ];
 

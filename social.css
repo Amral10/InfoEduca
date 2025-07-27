@@ -1,5 +1,3 @@
-/* social.css - Versão com as novas cores Azul (#006CB5) e Vermelho (#ED3237) */
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 /* Variáveis CSS para facilitar a manutenção de cores */
@@ -14,6 +12,8 @@
     --border-color: #DEE2E6; /* Borda suave */
     --shadow-light: rgba(0, 0, 0, 0.08); /* Sombra suave */
     --transition-speed: 0.3s ease;
+    --shadow-mild: rgba(0, 0, 0, 0.05);
+    --shadow-strong: rgba(0, 0, 0, 0.12);
 }
 
 /* Reset básico e configurações globais */

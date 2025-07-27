@@ -38,18 +38,29 @@
     align-items: stretch; /* Garante que os cards tenham a mesma altura */
 }
 
+/* Estilos base para TODOS os cards de conteúdo (Vestibulares, Redação, Disciplinas) */
 .content-card {
-    background-color: var(--card-background);
-    border-radius: 15px; /* Cantos mais arredondados */
-    overflow: hidden;
-    box-shadow: 0 8px 25px var(--shadow-light); /* Sombra mais forte */
-    aspect-ratio: 4/3; /* Mantém proporção da imagem (largura/altura) */
     display: flex;
-    align-items: flex-end; /* Alinha o overlay na parte inferior */
-    position: relative;
-    background-size: cover;
-    background-position: center;
-    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+    flex-direction: column;
+    justify-content: flex-end; /* Alinha o conteúdo (overlay/links) na parte inferior */
+
+    aspect-ratio: 3 / 2; /* Essencial: Garante a proporção da sua imagem (1200x800) */
+
+    border-radius: 15px; /* Bordas mais arredondadas */
+    overflow: hidden;
+    position: relative; /* Essencial para posicionar o overlay e os links */
+    
+    background-size: cover; /* Essencial: Preenche o card sem distorcer, agora que a proporção está correta */
+    background-position: center center;
+    
+    color: white; /* Cor do texto padrão nos cards */
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 8px 25px var(--shadow-light); /* Sombra mais pronunciada */
+    cursor: pointer; /* Indica que o card é clicável */
+    
+    /* Garante que o card tenha uma cor de fundo por padrão se não tiver imagem */
+    background-color: var(--primary-color); /* Uma cor padrão para todos os cards */
 }
 
 .content-card:hover {
@@ -67,30 +78,137 @@
     background-image: url('Imagens ilustrativas/redacao.jpeg'); /* Substitua pelo caminho da sua imagem de Redação */
 }
 
-.disciplinas-card {
+.disciplinas-card-main { /* Renomeado para evitar conflito com cards de disciplina */
     background-image: url('Imagens ilustrativas/disciplinas.jpeg'); /* Substitua pelo caminho da sua imagem de Disciplinas */
 }
 
+/* Cores sólidas para os cards de Vestibulares (mantendo as que você definiu) */
+.cederj-card, 
+.famerp-card, 
+.ita-card, 
+.passem-card, 
+.pscufam-card, 
+.pave-card, 
+.passeufms-card, 
+.pasuem-card {
+    background-color: #000080; /* Azul escuro */
+}
+.enem-card, 
+.famema-card, 
+.ime-card, 
+.pacunicentro-card, 
+.pasunb-card, 
+.sisuea-card {
+    background-color: #6f42c1; /* Roxo */
+}
+.fuvest-card, 
+.paesunimontes-card, 
+.pasufla-card {
+    background-color: #36454F; /* Cinza escuro */
+}
+
+/* Cores sólidas para os cards de Disciplinas (mantendo as que você definiu) */
+.portugues-card, 
+.matematica-card, 
+.geografia-card {
+    background-color: #000080;
+}
+
+.biologia-card, 
+.historia-card {
+    background-color: #6f42c1;
+}
+
+.quimica-card, 
+.sociologia-card, 
+.filosofia-card, 
+.fisica-card {
+    background-color: #36454F;
+}
+
+/* --- Estilos para o Overlay do Card (Título) --- */
+/* Este overlay sempre estará visível com seu gradiente e título */
 .card-overlay {
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)); /* Gradiente escuro na parte inferior */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)); /* Gradiente escuro na parte inferior */
     padding: 20px;
     width: 100%;
     color: white;
     text-align: left;
-    transition: background var(--transition-speed);
-    box-sizing: border-box; /* Garante que padding não estoure a largura */
+    box-sizing: border-box;
+    /* Mantenha o flex-direction column para organizar h3 e, potencialmente, links */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Alinha o h3 na parte inferior do overlay */
+    height: 100%; /* Garante que o overlay cubra o card inteiro */
+    position: absolute; /* Posiciona sobre o card */
+    top: 0;
+    left: 0;
+    transition: background 0.3s ease; /* Transição para o hover */
+    z-index: 1; /* Garante que o overlay esteja acima do fundo do card */
 }
 
-.content-card:hover .card-overlay {
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.3)); /* Gradiente mais escuro no hover */
-}
 
 .card-overlay h3 {
     font-size: 1.8rem; /* Título do card maior */
     margin: 0;
     font-weight: 600;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra no texto para melhor legibilidade */
+    transition: font-size 0.3s ease; /* Transição para o tamanho da fonte */
 }
+
+/* --- Estilos para os Links de Disciplina (quando revelados) --- */
+.discipline-links {
+    position: absolute; /* Posiciona sobre o card */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Ocupa todo o card */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza os links verticalmente */
+    align-items: center; /* Centraliza os links horizontalmente */
+    padding: 20px;
+    box-sizing: border-box;
+    
+    /* Fundo escuro para os links para contrastar com o card */
+    background-color: rgba(0, 0, 0.40, 0.80); 
+    border-radius: 15px; /* Bordas arredondadas (herda do card, mas para segurança) */
+    gap: 15px; /* Espaçamento entre os links */
+    
+    /* Estado inicial: oculto e sem interação */
+    opacity: 0;
+    pointer-events: none; /* Impede que os links sejam clicáveis quando ocultos */
+    transition: opacity 0.3s ease; /* Transição suave para aparecer/desaparecer */
+    z-index: 2; /* Acima do card-overlay */
+}
+
+/* --- Estado ATIVO do Card (quando clicado) --- */
+.content-card.active .discipline-links {
+    opacity: 1; /* Torna os links visíveis */
+    pointer-events: auto; /* Permite cliques nos links */
+}
+
+/* Estilo para os links individuais */
+.discipline-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.15); /* Fundo sutil para cada link */
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    display: block; /* Para que o padding e a largura funcionem */
+    width: 80%; /* Largura dos botões de link */
+    max-width: 250px; /* Limita a largura máxima */
+    text-align: center;
+}
+
+.discipline-links a:hover {
+    background-color: var(--primary-color); /* Cor principal no hover */
+    transform: scale(1.05); /* Pequeno zoom no hover */
+}
+
 
 /* --- Responsividade --- */
 @media (max-width: 992px) {
@@ -108,6 +226,10 @@
     }
     .card-overlay h3 {
         font-size: 1.6rem;
+    }
+    .discipline-links a {
+        font-size: 1rem;
+        padding: 8px 15px;
     }
 }
 
@@ -135,10 +257,15 @@
     .card-overlay h3 {
         font-size: 1.4rem;
     }
+    .discipline-links a {
+        font-size: 0.95rem;
+        padding: 7px 12px;
+    }
 }
 
-/* ... (Estilos existentes para .content-page-container, .section-title, .content-grid, .content-card, etc.) ... */
 
+/* --- Estilos para a página "Sobre Nós" --- */
+/* MANTIDOS COMO ESTÃO NO SEU ARQUIVO ORIGINAL */
 .content-detail-section {
     background-color: var(--card-background);
     padding: 30px;
@@ -239,205 +366,6 @@
     .tag {
         padding: 6px 12px;
         font-size: 0.85rem;
-    }
-}
-
-
-/* Ajustes para os cards terem cores sólidas */
-.content-card {
-    /* Garante que o card tenha uma cor de fundo por padrão se não tiver imagem */
-    background-color: var(--primary-color); /* Uma cor padrão para todos os cards */
-    display: flex; /* Mantém o display flex para alinhar o overlay */
-    align-items: flex-end; /* Alinha o overlay na parte inferior */
-    position: relative;
-    overflow: hidden;
-    border-radius: 15px;
-    box-shadow: 0 8px 25px var(--shadow-light);
-    aspect-ratio: 16/10;
-    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
-    /* Remove background-size e background-position se eles estiverem aqui */
-    background-size: auto; /* Garante que não tenha imagem de fundo */
-    background-position: initial; /* Garante que não tenha imagem de fundo */
-}
-
-
-
-/* Cores sólidas para os cards de Vestibulares */
-/* Você pode definir um padrão ou cores diferentes para cada um */
-
-/* Exemplo com um padrão de cores alternadas ou por categoria */
-.cederj-card,
-.famerp-card,
-.ita-card,
-.passem-card,
-.pscufam-card,
-.pave-card,
-.passeufms-card,
-.pasuem-card {
-    background-color: #000080; /* Azul claro */
-}
-
-.enem-card,
-.famema-card,
-.ime-card,
-.pacunicentro-card,
-.pasunb-card,
-.sisuea-card {
-    background-color: #6f42c1; /* Roxo */
-}
-
-.fuvest-card,
-.paesunimontes-card,
-.pasufla-card {
-    background-color: #36454F; /* Laranja */
-}
-
-
-/* O overlay precisa ter um fundo transparente ou semitransparente, mas o texto precisa ser visível */
-.card-overlay {
-    /* Mantenha o gradiente para dar um efeito de profundidade ao texto */
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
-    padding: 20px;
-    width: 100%;
-    color: white;
-    text-align: left;
-    transition: background var(--transition-speed);
-    box-sizing: border-box;
-}
-
-.content-card:hover .card-overlay {
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2)); /* Fica mais escuro no hover */
-}
-
-.card-overlay h3 {
-    font-size: 1.8rem;
-    margin: 0;
-    font-weight: 600;
-    color: white; /* Garante que o texto seja branco sobre a cor sólida */
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Sombra suave para o texto */
-}
-
-/* --- Estilos para a página "Sobre Nós" --- */
-.about-section {
-    background-color: var(--card-background);
-    padding: 40px;
-    border-radius: 15px;
-    box-shadow: 0 4px 20px var(--shadow-light);
-    text-align: left;
-    color: var(--text-dark);
-    line-height: 1.8;
-}
-
-.about-section p {
-    font-size: 1.1rem;
-    margin-bottom: 20px;
-}
-
-.about-section h3 {
-    font-size: 1.8rem;
-    color: var(--primary-color);
-    margin-top: 35px;
-    margin-bottom: 15px;
-    border-bottom: 2px solid var(--border-color);
-    padding-bottom: 8px;
-    font-weight: 600;
-}
-
-.about-section ul {
-    list-style: none;
-    padding: 0;
-    margin-bottom: 30px;
-}
-
-.about-section ul li {
-    font-size: 1.05rem;
-    margin-bottom: 12px;
-    display: flex;
-    align-items: center;
-    gap: 10px; /* Espaço entre ícone e texto */
-}
-
-.about-section ul li i {
-    color: var(--secondary-color); /* Ícones com a cor de destaque */
-    font-size: 1.3rem;
-}
-
-.about-section .call-to-action {
-    text-align: center;
-    margin-top: 50px;
-    padding-top: 30px;
-    border-top: 1px solid var(--border-color);
-}
-
-.about-section .call-to-action p {
-    font-size: 1.2rem;
-    font-weight: 500;
-    margin-bottom: 25px;
-    color: var(--text-dark);
-}
-
-.about-section .call-to-action .btn-primary,
-.about-section .call-to-action .btn-secondary {
-    display: inline-block;
-    margin: 0 10px;
-    padding: 12px 25px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
-}
-
-.about-section .call-to-action .btn-primary {
-    background-color: var(--primary-color);
-    color: white;
-    border: 2px solid var(--primary-color);
-}
-
-.about-section .call-to-action .btn-primary:hover {
-    background-color: #005699; /* Um tom mais escuro de azul */
-    transform: translateY(-2px);
-}
-
-.about-section .call-to-action .btn-secondary {
-    background-color: transparent;
-    color: var(--primary-color);
-    border: 2px solid var(--primary-color);
-}
-
-.about-section .call-to-action .btn-secondary:hover {
-    background-color: var(--primary-color);
-    color: white;
-    transform: translateY(-2px);
-}
-
-/* --- Responsividade para a página "Sobre Nós" --- */
-@media (max-width: 768px) {
-    .about-section {
-        padding: 25px;
-        border-radius: 10px;
-    }
-    .about-section p {
-        font-size: 1rem;
-    }
-    .about-section h3 {
-        font-size: 1.6rem;
-    }
-    .about-section ul li {
-        font-size: 0.95rem;
-    }
-    .about-section .call-to-action {
-        margin-top: 30px;
-        padding-top: 20px;
-    }
-    .about-section .call-to-action p {
-        font-size: 1.1rem;
-        margin-bottom: 20px;
-    }
-    .about-section .call-to-action .btn-primary,
-    .about-section .call-to-action .btn-secondary {
-        padding: 10px 20px;
-        font-size: 0.9rem;
-        margin: 0 5px;
     }
 }
 

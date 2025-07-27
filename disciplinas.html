@@ -1,9 +1,11 @@
+<!-- disciplinas.html -->
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Disciplinas - InfoEduca</title>
+    <script src="theme.js"></script>
     <link rel="stylesheet" href="social.css">
     <link rel="stylesheet" href="conteudos.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
@@ -15,7 +17,7 @@
                 <div class="logo-cabecalho">
                     <img src="Imagens ilustrativas/so_a_logo-branco.png" alt="Logo InfoEduca">
                 </div>
-                <h1>Info<b>Educa</b></h1>
+                <h1>Info<b style="background:#FF0000; border-radius: 5px; padding:0 5px 0 5px;">Educa</b></h1>
             </div>
             <ul>
                 <li><a href="Index.html"><i class="fas fa-home"></i> Feed</a></li>
@@ -23,54 +25,126 @@
                 <li><a href="mensagens.html"><i class="fas fa-comments"></i> Mensagens</a></li>
                 <li><a href="grupos.html"><i class="fas fa-users"></i> Grupos</a></li>
                 <li><a href="conteudos.html"><i class="fas fa-book-open"></i> Conteúdos</a></li>
-                <li><a href="login.html" id="logout-btn"><i class="fas fa-sign-out-alt"></i> Sair</a></li>
+                <li><a href="#" id="logout-btn"><i class="fas fa-sign-out-alt"></i> Sair</a></li>
             </ul>
         </nav>
     </header>
 
     <main class="content-page-container">
         <h2 class="section-title">DISCIPLINAS</h2>
-        <div class="content-detail-section">
-            <p>Explore o universo do conhecimento! Acesse materiais completos para todas as disciplinas do ensino médio, do fundamental e cursinho. Conteúdo organizado, videoaulas, exercícios resolvidos e resumos.</p>
-            
-            <h3>Disciplinas Populares:</h3>
-            <ul>
-                <li><a href="#">Matemática (Ensino Médio)</a></li>
-                <li><a href="#">Física (Eletricidade e Mecânica)</a></li>
-                <li><a href="#">Química (Orgânica e Inorgânica)</a></li>
-                <li><a href="#">Biologia (Genética e Ecologia)</a></li>
-                <li><a href="#">História (Geral e do Brasil)</a></li>
-                <li><a href="#">Geografia (Física e Humana)</a></li>
-                <li><a href="#">Português (Literatura e Gramática)</a></li>
-            </ul>
-            
-            <h3>Categorias:</h3>
-            <div class="tags">
-                <span class="tag">Exatas</span>
-                <span class="tag">Humanas</span>
-                <span class="tag">Biologia</span>
-                <span class="tag">Linguagens</span>
+        
+        <div class="content-grid">
+            <!-- Português -->
+            <div class="content-card portugues-card" data-discipline="portugues">
+                <div class="card-overlay">
+                    <h3>Português</h3>
+                </div>
+                <div class="discipline-links">
+                    <a href="Imagens ilustrativas/conteudos/conteudo-portuges.pdf"target="_blank">Conteúdo Completo Português</a>
+                    <a href="Imagens ilustrativas/conteudos/questoes-portugues.pdf" target="_blank">Questões Português</a>
+                </div>
             </div>
 
+            <!-- Matemática -->
+            <div class="content-card matematica-card" data-discipline="matematica">
+                <div class="card-overlay">
+                    <h3>Matemática</h3>
+                </div>
+                <div class="discipline-links">
+                    <a href="Imagens ilustrativas/conteudos/conteudo-matematica.pdf" target="_blank">Conteúdo Completo Matematica</a>
+                </div>
             </div>
+
+            <!-- História -->
+            <div class="content-card historia-card" data-discipline="historia">
+                <div class="card-overlay">
+                    <h3>História</h3>
+                </div>
+                <div class="discipline-links">
+                    <a href="Imagens ilustrativas/conteudos/conteudo-historia.pdf" target="_blank">Conteúdo Completo História</a>
+                </div>
+            </div>
+
+            <!-- Geografia -->
+            <div class="content-card geografia-card" data-discipline="geografia">
+                <div class="card-overlay">
+                    <h3>Geografia</h3>
+                </div>
+                <div class="discipline-links">
+                    <a href="Imagens ilustrativas/conteudos/conteudo-geografia.pdf" target="_blank">Conteúdo Completo Geografia</a>
+                </div>
+            </div>
+
+            <!-- Biologia -->
+            <div class="content-card biologia-card" data-discipline="biologia">
+                <div class="card-overlay">
+                    <h3>Biologia</h3>
+                </div>
+                <div class="discipline-links">
+                    <a href="Imagens ilustrativas/conteudos/conteudo-biologia.pdf" target="_blank">Conteúdo Completo Biologia</a>
+                </div>
+            </div>
+
+            <!-- Física -->
+            <div class="content-card fisica-card" data-discipline="fisica">
+                <div class="card-overlay">
+                    <h3>Física</h3>
+                </div>
+                <div class="discipline-links">
+                    <a href="#" target="_blank">Conteúdo Completo Física</a>
+                </div>
+            </div>
+
+            <!-- Química -->
+            <div class="content-card quimica-card" data-discipline="quimica">
+                <div class="card-overlay">
+                    <h3>Química</h3>
+                </div>
+                <div class="discipline-links">
+                    <a href="Imagens ilustrativas/conteudos/conteudo-quimica.pdf" target="_blank">Conteúdo Completo Química</a>
+                </div>
+            </div>
+
+
+            <!-- Sociologia -->
+            <div class="content-card sociologia-card" data-discipline="sociologia">
+                <div class="card-overlay">
+                    <h3>Sociologia</h3>
+                </div>
+                <div class="discipline-links">
+                    <a href="Imagens ilustrativas/conteudos/conteudo-sociologia.pdf" target="_blank">Conteúdo Completo Sociologia</a>
+                </div>
+            </div>
+
+            <!-- Filosofia -->
+            <div class="content-card filosofia-card" data-discipline="filosofia">
+                <div class="card-overlay">
+                    <h3>Filosofia</h3>
+                </div>
+                <div class="discipline-links">
+                    <a href="Imagens ilustrativas/conteudos/conteudo-filosofia.pdf" target="_blank">Conteúdo Completo Filosofia</a>
+                </div>
+            </div>
+
+        </div>
     </main>
 
     <footer>
-    <div class="footer-content">
-        <p>&copy; 2025 InfoEduca. Todos os direitos reservados.</p>
-        <ul class="footer-links">
-            <li><a href="sobre.html">Sobre Nós</a></li>
-            <li><span>|</span></li>
-            <li><a href="feedback.html">Feedback</a></li> <!-- NOVO LINK AQUI -->
-            <li><span>|</span></li>
-            <li><a href="#">Termos de Uso</a></li> <!-- Exemplo de outro link -->
-            <li><span>|</span></li>
-            <li><a href="#">Política de Privacidade</a></li> <!-- Exemplo de outro link -->
-        </ul>
-    </div>
+        <div class="footer-content">
+            <p>&copy; 2025 Rede Estudo. Todos os direitos reservados.</p>
+            <ul class="footer-links">
+                <li><a href="sobre.html">Sobre Nós</a></li>
+                <li><span>|</span></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><span>|</span></li>
+                <li><a href="#">Termos de Uso</a></li>
+                <li><span>|</span></li>
+                <li><a href="#">Política de Privacidade</a></li>
+            </ul>
+        </div>
     </footer>
 
-    <script src="theme.js"></script>
     <script src="social.js"></script>
+    <script src="disciplinas.js"></script> <!-- NOVO SCRIPT PARA ESTA PÁGINA -->
 </body>
 </html>

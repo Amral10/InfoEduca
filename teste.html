@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revolução Industrial: Uma Jornada Interativa! 🏭</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome CDN para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Estilos personalizados para a fonte Inter */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f2f5; /* Fundo cinza claro */
+        }
+        .container {
+            max-width: 900px;
+        }
+        .section-card {
+            background-color: #ffffff;
+            border-radius: 1rem; /* Cantos arredondados */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            transition: transform 0.2s ease-in-out;
+        }
+        .section-card:hover {
+            transform: translateY(-5px);
+        }
+        .quiz-option {
+            background-color: #e2e8f0; /* Azul claro para opções */
+            padding: 0.75rem 1rem;
+            border-radius: 0.5rem;
+            margin-bottom: 0.5rem;
+            cursor: pointer;
+            transition: background-color 0.2s ease-in-out;
+        }
+        .quiz-option:hover {
+            background-color: #cbd5e1;
+        }
+        .quiz-option.correct {
+            background-color: #a7f3d0; /* Verde para correto */
+            border: 2px solid #059669;
+        }
+        .quiz-option.incorrect {
+            background-color: #fecaca; /* Vermelho para incorreto */
+            border: 2px solid #ef4444;
+        }
+        .quiz-feedback {
+            margin-top: 1rem;
+            font-weight: 600;
+        }
+        .accordion-header {
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            background-color: #f8fafc;
+            border-bottom: 1px solid #e2e8f0;
+            border-radius: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            padding: 0 1rem;
+        }
+        .accordion-content.open {
+            max-height: 500px; /* Ajuste conforme o conteúdo */
+            padding-bottom: 1rem;
+        }
+        .accordion-header i {
+            transition: transform 0.3s ease-out;
+        }
+        .accordion-header.active i {
+            transform: rotate(90deg);
+        }
+    </style>
+</head>
+<body class="p-6">
+    <div class="container mx-auto bg-white p-8 rounded-2xl shadow-lg">
+        <header class="text-center mb-10">
+            <h1 class="text-5xl font-extrabold text-gray-900 mb-4">
+                Revolução Industrial: Uma Jornada Interativa! 🏭💡
+            </h1>
+            <p class="text-xl text-gray-600">
+                Descubra como o mundo mudou para sempre com as máquinas a vapor, fábricas e novas ideias!
+            </p>
+        </header>
+
+        <!-- Sumário / Tabela de Conteúdos -->
+        <nav class="mb-10 p-6 bg-blue-50 rounded-xl shadow-md">
+            <h2 class="text-2xl font-bold text-blue-800 mb-4">Sumário 📚</h2>
+            <ul class="list-disc list-inside text-lg text-gray-700">
+                <li><a href="#introducao" class="text-blue-600 hover:underline">Introdução: O Que Foi Isso?</a></li>
+                <li><a href="#contexto" class="text-blue-600 hover:underline">O Mundo Antes da Revolução</a></li>
+                <li><a href="#primeira-revolucao" class="text-blue-600 hover:underline">A Primeira Revolução Industrial (1760-1840)</a></li>
+                <li><a href="#segunda-revolucao" class="text-blue-600 hover:underline">A Segunda Revolução Industrial (1870-1914)</a></li>
+                <li><a href="#impactos-sociais" class="text-blue-600 hover:underline">Impactos Sociais: Luzes e Sombras</a></li>
+                <li><a href="#impactos-economicos" class="text-blue-600 hover:underline">Impactos Econômicos: O Capitalismo em Ação</a></li>
+                <li><a href="#curiosidades" class="text-blue-600 hover:underline">Curiosidades da Revolução!</a></li>
+                <li><a href="#quiz" class="text-blue-600 hover:underline">Quiz Rápido!</a></li>
+                <li><a href="#legado" class="text-blue-600 hover:underline">O Legado da Revolução</a></li>
+            </ul>
+        </nav>
+
+        <!-- Seções do Conteúdo -->
+
+        <section id="introducao" class="section-card">
+            <h3 class="text-3xl font-bold text-gray-800 mb-4 flex items-center">
+                <i class="fas fa-info-circle text-blue-500 mr-3"></i> Introdução: O Que Foi Isso?
+            </h3>
+            <p class="text-gray-700 leading-relaxed mb-4">
+                A Revolução Industrial foi um período de grandes transformações econômicas e sociais que começou na Grã-Bretanha no século XVIII e se espalhou pelo mundo. Ela marcou a transição de métodos de produção artesanais para a produção em larga escala, impulsionada por máquinas e novas fontes de energia.
+            </p>
+            <p class="text-gray-700 leading-relaxed">
+                Imagine um mundo onde quase tudo era feito à mão, devagar e em pequena quantidade. De repente, máquinas gigantes começam a fazer o trabalho de dezenas de pessoas, muito mais rápido e barato! Isso mudou tudo: como as pessoas viviam, trabalhavam, e até como o mundo era organizado.
+            </p>
+            <div class="mt-6 text-center">
+                <img src="https://placehold.co/600x300/F0F2F5/333333?text=Fábrica+a+Vapor+Ilustrativa" alt="Ilustração de uma fábrica a vapor" class="rounded-xl shadow-md mx-auto">
+                <p class="text-sm text-gray-500 mt-2">Representação de uma fábrica a vapor, símbolo da Revolução Industrial.</p>
+            </div>
+        </section>
+
+        <section id="contexto" class="section-card">
+            <h3 class="text-3xl font-bold text-gray-800 mb-4 flex items-center">
+                <i class="fas fa-globe-americas text-green-500 mr-3"></i> O Mundo Antes da Revolução
+            </h3>
+            <p class="text-gray-700 leading-relaxed mb-4">
+                Antes da Revolução Industrial, a maioria das pessoas vivia no campo, e a economia era baseada principalmente na agricultura e no artesanato. A produção era manual ou com o uso de ferramentas simples, e o trabalho era realizado em casa ou em pequenas oficinas.
+            </p>
+            <p class="text-gray-700 leading-relaxed">
+                A "Revolução Agrícola" que a precedeu, com novas técnicas de plantio e criação de gado, aumentou a produção de alimentos e liberou mão de obra do campo, que migrou para as cidades em busca de novas oportunidades.
+            </p>
+        </section>
+
+        <section id="primeira-revolucao" class="section-card">
+            <h3 class="text-3xl font-bold text-gray-800 mb-4 flex items-center">
+                <i class="fas fa-cogs text-red-500 mr-3"></i> A Primeira Revolução Industrial (1760-1840)
+            </h3>
+            <div class="accordion">
+                <div class="accordion-header" data-target="primeira-inovacoes">
+                    <h4 class="text-xl font-semibold text-gray-700">Inovações Chave 🛠️</h4>
+                    <i class="fas fa-chevron-right text-gray-500"></i>
+                </div>
+                <div id="primeira-inovacoes" class="accordion-content">
+                    <ul class="list-disc list-inside text-gray-700 leading-relaxed mt-2">
+                        <li><strong class="text-blue-600">Máquina a Vapor (James Watt):</strong> O motor da revolução! Transformou carvão em energia para fábricas, trens e navios.</li>
+                        <li><strong class="text-blue-600">Máquinas Têxteis:</strong>
+                            <ul class="list-circle list-inside ml-4">
+                                <li><strong class="text-purple-600">Spinning Jenny (James Hargreaves):</strong> Aumentou a produção de fios.</li>
+                                <li><strong class="text-purple-600">Tear Mecânico (Edmund Cartwright):</strong> Acelerou a produção de tecidos.</li>
+                            </ul>
+                        </li>
+                        <li><strong class="text-blue-600">Metalurgia:</strong> Novas técnicas para produzir ferro e aço, materiais essenciais para as máquinas.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="accordion">
+                <div class="accordion-header" data-target="primeira-impactos">
+                    <h4 class="text-xl font-semibold text-gray-700">Impactos e Mudanças 🌆</h4>
+                    <i class="fas fa-chevron-right text-gray-500"></i>
+                </div>
+                <div id="primeira-impactos" class="accordion-content">
+                    <ul class="list-disc list-inside text-gray-700 leading-relaxed mt-2">
+                        <li><strong class="text-blue-600">Sistema Fabril:</strong> O trabalho saiu das casas e foi para as grandes fábricas, com horários fixos e disciplina.</li>
+                        <li><strong class="text-blue-600">Urbanização:</strong> Cidades cresceram rapidamente com a migração do campo, muitas vezes sem infraestrutura adequada.</li>
+                        <li><strong class="text-blue-600">Novas Classes Sociais:</strong> Burguesia Industrial (donos das fábricas) e Proletariado (operários).</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="segunda-revolucao" class="section-card">
+            <h3 class="text-3xl font-bold text-gray-800 mb-4 flex items-center">
+                <i class="fas fa-bolt text-yellow-500 mr-3"></i> A Segunda Revolução Industrial (1870-1914)
+            </h3>
+            <p class="text-gray-700 leading-relaxed mb-4">
+                No final do século XIX, uma nova onda de inovações transformou ainda mais o mundo, com a descoberta de novas fontes de energia e a produção em massa.
+            </p>
+            <div class="accordion">
+                <div class="accordion-header" data-target="segunda-inovacoes">
+                    <h4 class="text-xl font-semibold text-gray-700">Novas Tecnologias e Energias ⚡</h4>
+                    <i class="fas fa-chevron-right text-gray-500"></i>
+                </div>
+                <div id="segunda-inovacoes" class="accordion-content">
+                    <ul class="list-disc list-inside text-gray-700 leading-relaxed mt-2">
+                        <li><strong class="text-blue-600">Eletricidade:</strong> Iluminou cidades e fábricas, permitindo o trabalho noturno e a criação de novos aparelhos.</li>
+                        <li><strong class="text-blue-600">Petróleo:</strong> Nova fonte de energia para motores de combustão interna (carros, aviões).</li>
+                        <li><strong class="text-blue-600">Aço:</strong> Produção em larga escala, mais barato e resistente que o ferro.</li>
+                        <li><strong class="text-blue-600">Química:</strong> Desenvolvimento de novos materiais, fertilizantes, medicamentos.</li>
+                        <li><strong class="text-blue-600">Comunicações:</strong> Telefone, rádio, telégrafo.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="accordion">
+                <div class="accordion-header" data-target="segunda-producao">
+                    <h4 class="text-xl font-semibold text-gray-700">Produção em Massa e Consumo 🚗</h4>
+                    <i class="fas fa-chevron-right text-gray-500"></i>
+                </div>
+                <div id="segunda-producao" class="accordion-content">
+                    <ul class="list-disc list-inside text-gray-700 leading-relaxed mt-2">
+                        <li><strong class="text-blue-600">Fordismo e Taylorismo:</strong> Métodos de organização do trabalho para aumentar a eficiência e a produção em massa (linhas de montagem).</li>
+                        <li><strong class="text-blue-600">Bens de Consumo:</strong> Mais produtos disponíveis e acessíveis para a população.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="impactos-sociais" class="section-card">
+            <h3 class="text-3xl font-bold text-gray-800 mb-4 flex items-center">
+                <i class="fas fa-users text-purple-500 mr-3"></i> Impactos Sociais: Luzes e Sombras
+            </h3>
+            <div class="accordion">
+                <div class="accordion-header" data-target="impactos-condicoes">
+                    <h4 class="text-xl font-semibold text-gray-700">Condições de Trabalho e Vida 😔</h4>
+                    <i class="fas fa-chevron-right text-gray-500"></i>
+                </div>
+                <div id="impactos-condicoes" class="accordion-content">
+                    <ul class="list-disc list-inside text-gray-700 leading-relaxed mt-2">
+                        <li><strong class="text-blue-600">Jornadas Exaustivas:</strong> Operários trabalhavam até 16 horas por dia, 6 ou 7 dias por semana.</li>
+                        <li><strong class="text-blue-600">Salários Baixos:</strong> Mal o suficiente para sobreviver, levando à pobreza.</li>
+                        <li><strong class="text-blue-600">Trabalho Infantil:</strong> Crianças eram empregadas em condições perigosas por salários ainda menores.</li>
+                        <li><strong class="text-blue-600">Falta de Segurança:</strong> Acidentes eram comuns e não havia direitos trabalhistas.</li>
+                        <li><strong class="text-blue-600">Moradias Precárias:</strong> Cidades superlotadas, cortiços, falta de saneamento básico e higiene.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="accordion">
+                <div class="accordion-header" data-target="impactos-lutas">
+                    <h4 class="text-xl font-semibold text-gray-700">Lutas e Novas Ideias 💪</h4>
+                    <i class="fas fa-chevron-right text-gray-500"></i>
+                </div>
+                <div id="impactos-lutas" class="accordion-content">
+                    <ul class="list-disc list-inside text-gray-700 leading-relaxed mt-2">
+                        <li><strong class="text-blue-600">Movimento Operário:</strong> Trabalhadores se organizaram em sindicatos para lutar por melhores condições.</li>
+                        <li><strong class="text-blue-600">Ludismo:</strong> Quebra de máquinas como forma de protesto contra a perda de empregos.</li>
+                        <li><strong class="text-blue-600">Novas Ideologias:</strong>
+                            <ul class="list-circle list-inside ml-4">
+                                <li><strong class="text-purple-600">Socialismo:</strong> Busca por maior igualdade social e controle coletivo dos meios de produção.</li>
+                                <li><strong class="text-purple-600">Anarquismo:</strong> Defesa da ausência de governo e hierarquias.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="impactos-economicos" class="section-card">
+            <h3 class="text-3xl font-bold text-gray-800 mb-4 flex items-center">
+                <i class="fas fa-chart-line text-teal-500 mr-3"></i> Impactos Econômicos: O Capitalismo em Ação
+            </h3>
+            <p class="text-gray-700 leading-relaxed mb-4">
+                A Revolução Industrial consolidou o sistema capitalista e transformou a economia global.
+            </p>
+            <ul class="list-disc list-inside text-gray-700 leading-relaxed">
+                <li><strong class="text-blue-600">Aumento da Produção:</strong> Bens produzidos em massa e mais baratos.</li>
+                <li><strong class="text-blue-600">Livre Mercado:</strong> Menos intervenção do Estado na economia.</li>
+                <li><strong class="text-blue-600">Expansão do Comércio:</strong> Com a produção em larga escala e o transporte mais eficiente, o comércio internacional cresceu exponencialmente.</li>
+                <li><strong class="text-blue-600">Acúmulo de Capital:</strong> Grandes fortunas foram geradas pelos industriais.</li>
+            </ul>
+        </section>
+
+        <section id="curiosidades" class="section-card">
+            <h3 class="text-3xl font-bold text-gray-800 mb-4 flex items-center">
+                <i class="fas fa-lightbulb text-orange-500 mr-3"></i> Curiosidades da Revolução!
+            </h3>
+            <ul class="list-disc list-inside text-gray-700 leading-relaxed">
+                <li><strong class="text-blue-600">O "Relógio de Ponto" nasceu aqui!</strong> Com o sistema fabril, era preciso controlar a jornada de trabalho dos operários.</li>
+                <li><strong class="text-blue-600">Poluição Extrema:</strong> As cidades industriais eram famosas pela fumaça das chaminés e pela sujeira, o que gerava muitos problemas de saúde.</li>
+                <li><strong class="text-blue-600">O Primeiro Trem a Vapor:</strong> O "Rocket" de George Stephenson, em 1829, foi um marco na história dos transportes!</li>
+                <li><strong class="text-blue-600">A Era do Carvão:</strong> O carvão mineral foi o combustível mais importante da Primeira Revolução, antes do petróleo e da eletricidade.</li>
+            </ul>
+        </section>
+
+        <section id="quiz" class="section-card">
+            <h3 class="text-3xl font-bold text-gray-800 mb-4 flex items-center">
+                <i class="fas fa-question-circle text-purple-500 mr-3"></i> Quiz Rápido! Teste Seus Conhecimentos!
+            </h3>
+            <div class="mb-6">
+                <p class="text-lg font-semibold text-gray-800 mb-3">1. Qual foi a principal fonte de energia da Primeira Revolução Industrial?</p>
+                <div class="quiz-option" data-question="1" data-answer="a">a) Eletricidade</div>
+                <div class="quiz-option" data-question="1" data-answer="b">b) Petróleo</div>
+                <div class="quiz-option" data-question="1" data-answer="c">c) Carvão Mineral</div>
+                <div class="quiz-option" data-question="1" data-answer="d">d) Energia Solar</div>
+                <div id="feedback-1" class="quiz-feedback"></div>
+            </div>
+
+            <div class="mb-6">
+                <p class="text-lg font-semibold text-gray-800 mb-3">2. Qual invenção de James Watt foi fundamental para a Revolução?</p>
+                <div class="quiz-option" data-question="2" data-answer="a">a) O Tear Mecânico</div>
+                <div class="quiz-option" data-question="2" data-answer="b">b) A Lâmpada Elétrica</div>
+                <div class="quiz-option" data-question="2" data-answer="c">c) A Máquina a Vapor</div>
+                <div class="quiz-option" data-question="2" data-answer="d">d) O Telefone</div>
+                <div id="feedback-2" class="quiz-feedback"></div>
+            </div>
+
+            <div class="mb-6">
+                <p class="text-lg font-semibold text-gray-800 mb-3">3. Qual sistema de produção se tornou dominante com a Revolução Industrial?</p>
+                <div class="quiz-option" data-question="3" data-answer="a">a) Artesanato doméstico</div>
+                <div class="quiz-option" data-question="3" data-answer="b">b) Sistema fabril</div>
+                <div class="quiz-option" data-question="3" data-answer="c">c) Agricultura de subsistência</div>
+                <div class="quiz-option" data-question="3" data-answer="d">d) Comércio de escravos</div>
+                <div id="feedback-3" class="quiz-feedback"></div>
+            </div>
+        </section>
+
+        <section id="legado" class="section-card">
+            <h3 class="text-3xl font-bold text-gray-800 mb-4 flex items-center">
+                <i class="fas fa-history text-gray-600 mr-3"></i> O Legado da Revolução
+            </h3>
+            <p class="text-gray-700 leading-relaxed mb-4">
+                A Revolução Industrial não foi apenas um evento histórico; ela moldou o mundo em que vivemos hoje. A produção em massa, a urbanização, a globalização, os direitos trabalhistas e até mesmo os desafios ambientais que enfrentamos são, em grande parte, heranças desse período.
+            </p>
+            <p class="text-gray-700 leading-relaxed">
+                Entender a Revolução Industrial é entender as raízes do nosso mundo moderno!
+            </p>
+        </section>
+
+        <footer class="text-center mt-10 text-gray-500 text-sm">
+            <p>&copy; 2025 Conteúdo Interativo sobre Revolução Industrial. Criado por Gemini.</p>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- Lógica do Quiz ---
+            const correctAnswers = {
+                '1': 'c', // Carvão Mineral
+                '2': 'c', // A Máquina a Vapor
+                '3': 'b'  // Sistema fabril
+            };
+
+            document.querySelectorAll('.quiz-option').forEach(option => {
+                option.addEventListener('click', function() {
+                    const questionNumber = this.dataset.question;
+                    const selectedAnswer = this.dataset.answer;
+                    const feedbackElement = document.getElementById(`feedback-${questionNumber}`);
+
+                    // Remove classes de feedback anteriores para a mesma questão
+                    document.querySelectorAll(`.quiz-option[data-question="${questionNumber}"]`).forEach(opt => {
+                        opt.classList.remove('correct', 'incorrect');
+                    });
+
+                    if (selectedAnswer === correctAnswers[questionNumber]) {
+                        this.classList.add('correct');
+                        feedbackElement.textContent = '🎉 Correto! Muito bem!';
+                        feedbackElement.style.color = '#059669'; // Tailwind green-700
+                    } else {
+                        this.classList.add('incorrect');
+                        feedbackElement.textContent = '😕 Incorreto. Tente novamente!';
+                        feedbackElement.style.color = '#ef4444'; // Tailwind red-600
+
+                        // Opcional: mostrar a resposta correta após um erro
+                        document.querySelectorAll(`.quiz-option[data-question="${questionNumber}"]`).forEach(opt => {
+                            if (opt.dataset.answer === correctAnswers[questionNumber]) {
+                                opt.classList.add('correct'); // Destaca a resposta correta
+                            }
+                        });
+                    }
+                });
+            });
+
+            // --- Lógica do Acordeão (Collapsible Sections) ---
+            document.querySelectorAll('.accordion-header').forEach(header => {
+                header.addEventListener('click', function() {
+                    const targetId = this.dataset.target;
+                    const content = document.getElementById(targetId);
+                    
+                    // Toggle the 'open' class on the content
+                    content.classList.toggle('open');
+                    
+                    // Toggle the 'active' class on the header for icon rotation
+                    this.classList.toggle('active');
+
+                    // Adjust max-height for smooth transition
+                    if (content.classList.contains('open')) {
+                        content.style.maxHeight = content.scrollHeight + "px";
+                    } else {
+                        content.style.maxHeight = "0";
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
